@@ -48,6 +48,48 @@
     });
   }
 
+  /* 슬라이더 (data-slider): 자동 넘김 + 점 + 화살표 + 손가락 넘기기 */
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('[data-slider]').forEach(function (box) {
+    var slides = box.querySelectorAll('.slide');
+    var dots = box.querySelector('.slider-dots');
+    var cur = 0, timer = null;
+    var ms = parseInt(box.getAttribute('data-interval'), 10) || 5000;
+    var dotBtns = [];
+    slides.forEach(function (_, i) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', (i + 1) + '번째 사진 보기');
+      b.addEventListener('click', function () { go(i); restart(); });
+      if (dots) dots.appendChild(b);
+      dotBtns.push(b);
+    });
+    function go(n) {
+      cur = (n + slides.length) % slides.length;
+      slides.forEach(function (s, i) { s.classList.toggle('is-active', i === cur); });
+      dotBtns.forEach(function (b, i) { b.setAttribute('aria-current', i === cur ? 'true' : 'false'); });
+    }
+    function restart() {
+      clearInterval(timer);
+      if (!reduce) timer = setInterval(function () { go(cur + 1); }, ms);
+    }
+    var prev = box.querySelector('.slider-arrow.prev');
+    var next = box.querySelector('.slider-arrow.next');
+    if (prev) prev.addEventListener('click', function () { go(cur - 1); restart(); });
+    if (next) next.addEventListener('click', function () { go(cur + 1); restart(); });
+    var x0 = null;
+    box.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    box.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40) { go(cur + (dx < 0 ? 1 : -1)); restart(); }
+      x0 = null;
+    });
+    box.addEventListener('mouseenter', function () { clearInterval(timer); });
+    box.addEventListener('mouseleave', restart);
+    go(0); restart();
+  });
+
   /* 꽃길 따라가기: 스크롤하면 진행선이 채워지고 지점이 나타남 */
   var trail = document.querySelector('.trail');
   if (trail) {
