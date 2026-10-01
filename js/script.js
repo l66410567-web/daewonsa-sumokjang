@@ -10,6 +10,7 @@
   var mnav = document.getElementById('mnav');
   if (menuBtn && mnav) {
     menuBtn.addEventListener('click', function () {
+      mnav.style.top = Math.max(0, document.querySelector('.site-header').getBoundingClientRect().bottom) + 'px';
       var open = mnav.classList.toggle('open');
       menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
       menuBtn.querySelector('.label').textContent = open ? '닫기' : '메뉴';

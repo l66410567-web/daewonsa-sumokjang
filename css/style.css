@@ -553,3 +553,111 @@ body { padding-bottom: calc(var(--mbar-h) + env(safe-area-inset-bottom)); }
 .card-photo--land img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); }
 .card-grid--land { grid-template-columns: 1fr; }
 @media (min-width: 768px) { .card-grid--land { grid-template-columns: repeat(3, 1fr); } }
+
+/* =========================================================
+   고급스러운 안정감 다듬기 (2026-10-02) — 아래 규칙이 위 규칙을 덮어씀
+   ========================================================= */
+:root {
+  --gold: #A88B5A;          /* 가는 선 · 번호 등 절제된 포인트 */
+  --hair: rgba(47, 74, 58, .14);
+  --shadow: 0 1px 2px rgba(34,55,43,.04), 0 10px 30px rgba(34,55,43,.07);
+}
+
+/* 상단 신뢰 띠 */
+.topbar { background: var(--green-dark); color: #C9D3CC; font-size: 14px; letter-spacing: .02em; }
+.topbar .wrap { min-height: 36px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.topbar b { color: #fff; font-weight: 600; }
+.topbar a { color: #fff; text-decoration: none; font-weight: 600; }
+
+/* 제목 체계: 작은 머리글 + 명조 제목 + 가는 금선 */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--sans); font-size: 14px; font-weight: 600; letter-spacing: .2em; color: var(--pink-ink);
+}
+.eyebrow::before { content: ""; width: 22px; height: 1px; background: currentColor; opacity: .7; }
+.center .eyebrow::after { content: ""; width: 22px; height: 1px; background: currentColor; opacity: .7; }
+.sec-title { font-size: 30px; letter-spacing: -.01em; line-height: 1.38; }
+.sec-title::after { width: 44px; height: 1px; border-radius: 0; background: var(--gold); margin-top: 18px; }
+@media (min-width: 768px) { .sec-title { font-size: 38px; } .section { padding: 96px 0; } }
+
+/* 카드 공통 질감 */
+.path-card, .stat, .info-card, .tree-card, .draft, .cta-box, .steps li {
+  border: 1px solid var(--hair); box-shadow: var(--shadow); border-radius: 18px;
+}
+.draft { border-style: solid; }
+.path-card { padding: 30px 26px; }
+.path-card h2 { font-size: 26px; }
+.btn--call { box-shadow: 0 6px 18px rgba(34,55,43,.22); }
+.btn { letter-spacing: .01em; }
+
+/* 메인 소개: 사진 + 글 2단 */
+.intro-sec { background: var(--bg); }
+.intro { display: grid; gap: 36px; align-items: center; }
+.intro-photo { position: relative; margin: 0 12px 0 0; }
+.intro-photo::before {
+  content: ""; position: absolute; inset: 14px -12px -12px 14px; border: 1px solid var(--gold); border-radius: 22px; opacity: .6;
+}
+.intro-photo img { position: relative; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow); }
+.intro-photo figcaption { position: relative; font-size: 14px; color: var(--muted); margin-top: 20px; }
+.intro-text p { font-size: 18px; color: #3d3d3a; }
+.intro-facts { margin: 24px 0 0; border-top: 1px solid var(--hair); }
+.intro-facts div { display: grid; grid-template-columns: 92px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--hair); }
+.intro-facts dt { font-size: 15px; font-weight: 700; color: var(--green); letter-spacing: .04em; }
+.intro-facts dd { margin: 0; font-size: 17px; }
+.intro-sign { font-family: var(--serif); color: var(--pink-ink); font-size: 18px; margin: 22px 0 0; }
+.intro-sign::before { content: "— "; }
+@media (min-width: 1024px) {
+  .intro { grid-template-columns: 1fr 1fr; gap: 72px; }
+  .intro-photo img { aspect-ratio: 4 / 5; }
+}
+
+/* 바로가기: 숲 초록 바탕 + 가는 선 격자 */
+.quick-sec { background: var(--green); color: #E7EDE8; padding: 72px 0; position: relative; overflow: hidden; }
+.quick-sec::before {
+  content: ""; position: absolute; right: -70px; bottom: -80px; width: 260px; height: 340px; opacity: .045;
+  background: url("../assets/logo/logo-mark.svg") center / contain no-repeat; filter: brightness(0) invert(1);
+}
+.quick-head { position: relative; margin-bottom: 28px; }
+.quick-head .eyebrow { color: #F0C7CE; }
+.quick-head h2 { color: #fff; font-size: 26px; margin: 6px 0 0; }
+.quick {
+  position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 0;
+  border-top: 1px solid rgba(255,255,255,.16); border-left: 1px solid rgba(255,255,255,.16);
+}
+.quick a {
+  position: relative; display: flex; flex-direction: column; gap: 6px; min-height: 168px;
+  padding: 22px 16px 20px; background: transparent; border: 0; border-radius: 0;
+  border-right: 1px solid rgba(255,255,255,.16); border-bottom: 1px solid rgba(255,255,255,.16);
+  color: #fff; text-decoration: none; transition: background .25s;
+}
+.quick a:hover, .quick a:focus-visible { background: rgba(255,255,255,.07); transform: none; }
+.quick .q-no { display: block; position: absolute; right: 14px; top: 14px; font-size: 12px; letter-spacing: .12em; color: #D2B98A; font-weight: 700; }
+.q-ic { width: 30px; height: 30px; fill: none; stroke: #F0C7CE; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 6px; }
+.quick b { font-family: var(--serif); font-size: 19px; color: #fff; }
+.quick b::after { content: none; }
+.quick .q-desc { display: block; font-size: 15px; margin: 0; color: #C9D6CD; line-height: 1.5; }
+.quick .q-go { display: block; margin-top: auto; color: #F0C7CE; font-size: 18px; opacity: .6; transition: transform .25s, opacity .25s; }
+.quick a:hover .q-go { opacity: 1; transform: translateX(4px); }
+@media (min-width: 768px) {
+  .quick-sec { padding: 96px 0; }
+  .quick-head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 36px; }
+  .quick-head h2 { font-size: 34px; }
+  .quick { grid-template-columns: repeat(4, 1fr); }
+  .quick a { min-height: 210px; padding: 30px 26px 26px; }
+  .q-ic { width: 34px; height: 34px; }
+  .quick b { font-size: 22px; }
+  .quick .q-desc { font-size: 16px; }
+}
+
+/* 숫자 · 신뢰 띠 다듬기 */
+.stat { padding: 26px 12px; background: #fff; }
+.stat b { color: var(--green); }
+.stat span { font-size: 15px; }
+.trust { background: var(--green-dark); padding: 64px 0; }
+.trust h2 { font-size: 26px; }
+.trust-list li { padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,.12); }
+.trust-list li::before { background-color: transparent; border: 1px solid var(--pink); }
+
+/* 페이지 머리 · 푸터 */
+.page-hero { background: linear-gradient(180deg, var(--green-soft), var(--bg)); border-bottom: 1px solid var(--hair); }
+.site-footer { border-top: 3px solid var(--gold); }
