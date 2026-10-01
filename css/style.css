@@ -735,3 +735,12 @@ body { padding-bottom: calc(var(--mbar-h) + env(safe-area-inset-bottom)); }
   .member-why:not(.member-why--plain) ul { grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .member-why:not(.member-why--plain) { padding: 26px 30px; }
 }
+
+/* ---------- 가격의 가치 요약 ---------- */
+.value-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin: 28px 0 12px; background: var(--hair); border: 1px solid var(--hair); border-radius: 16px; overflow: hidden; }
+.value-strip div { background: #fff; padding: 18px 16px; }
+.value-strip b { display: block; font-family: var(--serif); font-size: 18px; color: var(--green); }
+.value-strip b::before { content: ""; display: block; width: 18px; height: 1px; background: var(--gold); margin-bottom: 10px; }
+.value-strip span { display: block; font-size: 14px; color: var(--muted); line-height: 1.55; margin-top: 4px; }
+.value-note { font-size: 15px; color: var(--muted); margin: 0 0 8px; }
+@media (min-width: 768px) { .value-strip { grid-template-columns: repeat(4, 1fr); } .value-strip div { padding: 24px 22px; } .value-strip b { font-size: 20px; } .value-strip span { font-size: 15px; } }
