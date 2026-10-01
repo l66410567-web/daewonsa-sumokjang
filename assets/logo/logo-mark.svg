@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" role="img" aria-label="대원사 꽃길숲 수목장 로고">
+  <!-- 임시 로고(명함 시안 참고). 원본 로고 파일을 받으면 이 파일만 같은 이름으로 교체하세요. -->
+  <polygon points="96,118 104,118 124,252 76,252" fill="#2F4A3A"/>
+  <g transform="translate(100 92)" fill="#C97B87">
+    <path id="p" d="M0,2 C-34,-8 -38,-52 -9,-60 L0,-51 L9,-60 C38,-52 34,-8 0,2Z"/>
+    <use href="#p" transform="rotate(72)"/>
+    <use href="#p" transform="rotate(144)"/>
+    <use href="#p" transform="rotate(216)"/>
+    <use href="#p" transform="rotate(288)"/>
+  </g>
+  <circle cx="100" cy="92" r="9" fill="#FFFFFF"/>
+</svg>
