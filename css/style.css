@@ -712,3 +712,26 @@ body { padding-bottom: calc(var(--mbar-h) + env(safe-area-inset-bottom)); }
 .member-note { font-size: 13px; color: var(--muted); }
 .member-note b { color: inherit; font-weight: 600; }
 .site-footer .member-note { color: #9FB0A5; margin-top: 14px; }
+
+/* ---------- 신도 가입 이유 설명 ---------- */
+.mw-why { display: block; font-size: 13px; line-height: 1.6; color: inherit; opacity: .85; margin-top: 4px; }
+.trust .mw-why { color: #C9D6CD; font-size: 14px; }
+.info-card .mw-why { font-size: 15px; color: var(--muted); opacity: 1; margin-top: 8px; }
+.member-why {
+  margin-top: 28px; padding: 22px 20px; border-radius: 16px; background: #F4F1EA;
+  border: 1px solid var(--hair); border-left: 3px solid var(--gold); font-size: 15px; line-height: 1.65;
+}
+.member-why--plain { margin-top: 0; background: transparent; border: 0; padding: 0; }
+.mw-lead { margin: 0 0 12px; font-size: 16px; color: var(--text); }
+.mw-lead b { color: var(--green); }
+.mw-q { margin: 0 0 8px; font-family: var(--serif); font-weight: 700; color: var(--green); font-size: 16px; }
+.member-why ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.member-why li { position: relative; padding-left: 18px; }
+.member-why li::before { content: ""; position: absolute; left: 2px; top: .7em; width: 6px; height: 6px; border-radius: 50%; background: var(--pink); }
+.member-why li b { display: block; color: var(--green); font-size: 15px; }
+.member-why li span { color: var(--muted); }
+.mw-foot { margin: 12px 0 0; font-size: 14px; color: var(--muted); }
+@media (min-width: 768px) {
+  .member-why:not(.member-why--plain) ul { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .member-why:not(.member-why--plain) { padding: 26px 30px; }
+}
