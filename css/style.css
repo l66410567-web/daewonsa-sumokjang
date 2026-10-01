@@ -541,3 +541,15 @@ body { padding-bottom: calc(var(--mbar-h) + env(safe-area-inset-bottom)); }
 .card-grid--4 { grid-template-columns: 1fr 1fr; }
 @media (min-width: 768px) { .card-grid--4 { grid-template-columns: repeat(4, 1fr); } }
 .draft .photo--tall { margin-top: 16px; }
+
+/* ---------- 설명 달린 사진 (figure + 캡션) ---------- */
+.fig { margin: 14px 0 0; }
+.fig img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); }
+.fig figcaption { font-size: 15px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
+.fig--wide img { aspect-ratio: 16 / 9; }
+.fig-grid { display: grid; gap: 12px; }
+@media (min-width: 768px) { .fig-grid { grid-template-columns: 1fr 1fr; gap: 18px; } }
+.src-note { font-size: 14px; color: var(--muted); margin: 10px 0 0; }
+.card-photo--land img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); }
+.card-grid--land { grid-template-columns: 1fr; }
+@media (min-width: 768px) { .card-grid--land { grid-template-columns: repeat(3, 1fr); } }
