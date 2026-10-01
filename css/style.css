@@ -707,3 +707,8 @@ body { padding-bottom: calc(var(--mbar-h) + env(safe-area-inset-bottom)); }
 .faq-item .faq-a { padding: 0 20px 22px 50px; color: #3d3d3a; }
 .faq-item .faq-a p { margin: 0; }
 @media (min-width: 768px) { .faq-item summary { padding: 26px 30px; font-size: 21px; } .faq-item .faq-a { padding: 0 30px 26px 60px; } }
+
+/* 신도 등록 안내: 부담 없이 조용하게 */
+.member-note { font-size: 13px; color: var(--muted); }
+.member-note b { color: inherit; font-weight: 600; }
+.site-footer .member-note { color: #9FB0A5; margin-top: 14px; }
