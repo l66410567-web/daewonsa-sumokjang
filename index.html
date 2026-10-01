@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="css/style.css?v=20261002b">
+<link rel="stylesheet" href="css/style.css?v=20261002c">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -78,16 +78,12 @@
   <!-- ===== 히어로 ===== -->
   <section class="hero">
     <div class="hero-wrap">
-    <div class="hero-slides slider" data-slider data-interval="5000" aria-roledescription="carousel" aria-label="꽃길숲 조성 예상 이미지">
-      <figure class="slide is-active"><img src="images/home/tall-1.jpg" alt="벚꽃과 추모목 사이로 굽이진 꽃길숲 전경"></figure>
-      <figure class="slide"><img src="images/home/tall-2.jpg" alt="벚꽃 가지 아래로 이어진 꽃잎 깔린 산책로" loading="lazy"></figure>
-      <figure class="slide"><img src="images/home/tall-3.jpg" alt="단풍나무와 꽃이 어우러진 추모목 쉼터" loading="lazy"></figure>
-      <span class="render-tag">조성 예상 이미지</span>
-      <div class="slider-dots"></div>
-    </div>
+    <figure class="hero-slides hero-photo">
+      <img src="images/site/main-fir-path.jpg" alt="추모목이 양옆으로 늘어선 숲속 참배길">
+    </figure>
     <div class="hero-inner">
-      <span class="hero-badge">한국의 아름다운 길 100선</span>
-      <div class="hero-logo"><img src="assets/logo/logo-mark.svg" alt="대원사 꽃길숲 수목장 로고"></div>
+      <span class="hero-badge"><img class="hero-mark" src="assets/logo/logo-mark.svg" alt="">한국의 아름다운 길 100선</span>
+      
       <h1>벚꽃길 5.5km,<br>그 끝에 머무는 안식처</h1>
       <p class="hero-sub">1,500여 년 <strong>천년고찰 대원사</strong>가<br class="br-mo"> 직접 모시고 지키는 수목장입니다.</p>
       <div class="btn-row">
@@ -119,6 +115,29 @@
         <span class="go">지금 하실 일 보기 →</span>
         <p class="member-note">※ 분양은 <b>대원사 신도 가입 후</b> 가능합니다.</p>
       </a>
+    </div>
+  </section>
+
+
+  <!-- ===== 수목장 소개 + 바로가기 ===== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="intro center">
+        <span class="eyebrow">꽃길숲 수목장</span>
+        <h2 class="sec-title">자연으로 돌아가는<br class="br-mo"> 가장 고요한 길</h2>
+        <p class="lead">수목장은 화장한 유골을 추모목 아래 흙에 모셔<br class="br-pc"> 고인이 자연의 품으로 돌아가게 하는 장례 방식입니다.<br>
+        봉분도 비석도 없이, 나무가 자라며 고인을 기억합니다.<br class="br-pc"> 남은 가족은 숲길을 걸으며 마음을 다독입니다.</p>
+      </div>
+      <nav class="quick" aria-label="바로가기">
+        <a href="story.html"><b>꽃길숲 이야기</b><span>천년고찰 대원사와<br>천봉산 이야기</span></a>
+        <a href="guide.html#trees"><b>추모목 안내</b><span>추모목 · 관상목<br>종류와 안치 기수</span></a>
+        <a href="guide.html#price"><b>이용료 안내</b><span>사용료 · 관리비,<br>안치 방법</span></a>
+        <a href="tour.html"><b>꽃길숲 둘러보기</b><span>사진으로 먼저<br>만나보는 숲</span></a>
+        <a href="memorial.html"><b>추모와 행사</b><span>함께 기리는<br>추모재 안내</span></a>
+        <a href="contact.html"><b>오시는 길</b><span>대원사 · 광주 상담실<br>위치와 참배 안내</span></a>
+        <a href="prepare.html#visit"><b>현장 답사 예약</b><span>직접 걸어보고<br>정하세요</span></a>
+        <a href="faq.html"><b>자주 묻는 질문</b><span>많이 물으시는<br>내용 모음</span></a>
+      </nav>
     </div>
   </section>
 
@@ -161,7 +180,7 @@
           <span class="trail-km">도착 · 5.5km</span>
           <h3>꽃길숲 수목장</h3>
           <p>화장한 유골을 추모목 아래 자연으로 모시는 수목장입니다. 천년고찰 대원사가 운영하며, 사찰이 곁에서 모시고 지킵니다.</p>
-          <div class="photo" data-photo="images/home/wide-2.jpg" role="img" aria-label="꽃잎이 깔린 꽃길숲 산책로"><span class="render-tag">조성 예상 이미지</span></div>
+          <div class="photo photo--tall" data-photo="images/site/tree-flowers.jpg" role="img" aria-label="추모목 아래 놓인 꽃과 참배 자리"></div>
           <div class="btn-row">
             <a class="btn btn--call" href="tel:01076410567">전화로 물어보기</a>
             <a class="btn btn--line" href="guide.html#price">이용료 · 이용 안내</a>
@@ -186,6 +205,23 @@
       <button class="slider-arrow prev" type="button" aria-label="이전 사진">‹</button>
       <button class="slider-arrow next" type="button" aria-label="다음 사진">›</button>
       <div class="slider-dots"></div>
+    </div>
+  </section>
+
+  <!-- ===== 꽃길숲 사진 (실사진 미리보기) ===== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="center">
+        <span class="eyebrow">꽃길숲 사진</span>
+        <h2 class="sec-title">추모목 숲의 모습</h2>
+      </div>
+      <div class="gallery-strip">
+        <a href="tour.html"><img src="images/site/main-fir-path.jpg" alt="추모목이 늘어선 참배길" loading="lazy"></a>
+        <a href="tour.html"><img src="images/site/fir-row-lawn.jpg" alt="잔디 위로 줄지어 선 추모목" loading="lazy"></a>
+        <a href="tour.html"><img src="images/site/tree-flowers.jpg" alt="추모목 아래 놓인 꽃" loading="lazy"></a>
+        <a href="tour.html"><img src="images/site/fir-row-sky.jpg" alt="하늘로 곧게 자란 추모목" loading="lazy"></a>
+      </div>
+      <p class="center"><a class="btn btn--line" href="tour.html">사진 더 보기</a></p>
     </div>
   </section>
 
@@ -223,7 +259,7 @@
         <div><h3>봄 · 벚꽃</h3><p>5.5km 벚꽃 터널이 꽃잎으로 물드는 계절입니다. 해마다 봄이면 보성벚꽃축제가 열립니다.</p></div>
       </div>
       <div class="tab-panel" role="tabpanel" id="panel-summer" aria-labelledby="tab-summer" hidden>
-        <div class="photo" data-photo="images/seasons/summer.jpg" role="img" aria-label="여름 녹음"></div>
+        <div class="photo" data-photo="images/site/fir-row-sky.jpg" role="img" aria-label="푸른 하늘 아래 짙푸른 추모목 숲"></div>
         <div><h3>여름 · 녹음</h3><p>꽃이 진 자리에 짙은 초록 그늘이 드리웁니다. 숲 사이로 시원한 바람이 지나갑니다.</p></div>
       </div>
       <div class="tab-panel" role="tabpanel" id="panel-autumn" aria-labelledby="tab-autumn" hidden>
@@ -242,10 +278,11 @@
     <div class="wrap">
       <h2>믿고 맡기실 수 있도록</h2>
       <ul class="trust-list">
-        <li><span><strong>운영 주체</strong> — 천년고찰 보성 대원사 <span class="tbd">소속 종단 정식 명칭</span></span></li>
+        <li><span><strong>운영 주체</strong> — 대한불교조계종 천년고찰 보성 대원사</span></li>
         <li><span><strong>문화재 현상변경 허가</strong> — 2022년 전라남도 지정문화재(대원사 극락전) 현상변경 허가를 거쳐 조성</span></li>
         <li><span><strong>자연장지 허가</strong> — <span class="tbd">허가번호 · 허가일</span></span></li>
         <li><span><strong>소재지</strong> — 전남 보성군 문덕면 죽산리 산77-1 (조성 면적 2,700㎡)</span></li>
+        <li><span><strong>종단 승인</strong> — <span class="tbd">조계종 총무원 수목장 승인 여부 · 승인일</span></span></li>
         <li><span><strong>분양 자격</strong> — 대원사 신도 가입 후 분양</span></li>
       </ul>
     </div>
@@ -309,6 +346,6 @@
   <a href="sms:01076410567"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>문자</a>
 </nav>
 
-<script src="js/script.js?v=20261002b"></script>
+<script src="js/script.js?v=20261002c"></script>
 </body>
 </html>
