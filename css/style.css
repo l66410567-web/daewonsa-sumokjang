@@ -1090,3 +1090,16 @@ body { background: #FFFFFF; }
 .card-grid--3 { grid-template-columns: 1fr; }
 @media (min-width: 600px) { .card-grid--3 { grid-template-columns: repeat(3, 1fr); } }
 .card-grid--3 .photo { aspect-ratio: 2 / 3; }
+
+/* ---------- 서브 페이지 머리: 올리브 덮개 → 중성 어두운 덮개(메뉴 띠와 겹쳐 보이지 않게) ---------- */
+.page-hero { background-color: #1E211A; min-height: 260px; display: flex; align-items: flex-end; }
+.page-hero::before {
+  background:
+    linear-gradient(180deg, rgba(14,16,12,.30) 0%, rgba(14,16,12,0) 35%, rgba(14,16,12,.55) 100%),
+    linear-gradient(90deg, rgba(14,16,12,.70) 0%, rgba(14,16,12,.38) 55%, rgba(14,16,12,.10) 100%);
+}
+.page-hero .wrap { width: 100%; }
+.page-hero h1, .page-hero p, .page-hero .breadcrumb { text-shadow: 0 1px 12px rgba(0,0,0,.35); }
+.page-hero .breadcrumb { color: rgba(255,255,255,.85); }
+.page-hero p { color: rgba(255,255,255,.92); }
+@media (min-width: 768px) { .page-hero { min-height: 360px; } }
