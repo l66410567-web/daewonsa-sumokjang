@@ -1633,3 +1633,13 @@ body { background: #FFFFFF; }
 .vn-gift::before { display: inline-block; vertical-align: -4px; margin-right: 6px; }
 .vn-gift b, .visit-note .vn-gift b { display: inline; font-family: inherit; font-size: inherit; color: #23401A; margin: 0; }
 .vn-gift, .visit-note .vn-gift { border-radius: 12px; }
+/* 봉안함 강조 · 마무리 띠 벚꽃길 배경 */
+.vn-gift b.gift-red, .visit-note .vn-gift b.gift-red, b.gift-red { color: #B3261E; font-weight: 700; }
+.closing {
+  position: relative; isolation: isolate;
+  background: linear-gradient(180deg, rgba(30,38,12,.55) 0%, rgba(30,38,12,.62) 50%, rgba(24,30,8,.78) 100%),
+              url("../images/hero/slide-01-cherry-path.jpg") center 55% / cover no-repeat;
+}
+.closing h2 { text-shadow: 0 2px 18px rgba(0,0,0,.45); }
+.closing p { color: #F1EEDF; text-shadow: 0 1px 10px rgba(0,0,0,.5); }
+@media (min-width: 1024px) { .closing { background-attachment: scroll; padding: 130px 0; } }
