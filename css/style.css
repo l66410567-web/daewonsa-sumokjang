@@ -1465,3 +1465,99 @@ body { background: #FFFFFF; }
 }
 .wi-steps p b { color: #3E6A2C; }
 @media (max-width: 767px) { .wi-steps li { padding: 10px 12px; gap: 12px; } .wi-steps p { font-size: 13.5px; } .wi-steps li > div > b { font-size: 16px; } }
+
+/* =========================================================
+   상을 당하셨을 때 (urgent): 할 일 · 3일장 · 꽃길숲 절차 · 서류 · 상담
+   ========================================================= */
+.ug-sec .lead { max-width: 760px; }
+.ug-ic { display: flex; align-items: center; justify-content: center; flex: none; width: 56px; height: 56px; border-radius: 50%;
+  --c: #3E6A2C; --c2: #6F9A45; background: radial-gradient(circle at 30% 25%, var(--c2), var(--c) 70%);
+  box-shadow: 0 0 0 4px #fff, 0 0 0 5px color-mix(in srgb, var(--c) 30%, transparent), 0 10px 22px color-mix(in srgb, var(--c) 30%, transparent); }
+.ug-ic svg { width: 28px; height: 28px; fill: none; stroke: #fff; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.ug-ic--gold { --c: #A9822F; --c2: #D7B460; }
+.ug-ic--help { --c: #9E3D2A; --c2: #CF7457; }
+
+/* 지금 하실 일 */
+.ug-now { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 16px; }
+.ug-now-item { position: relative; overflow: hidden; padding: 26px 22px 22px; border-radius: 20px; background: linear-gradient(160deg, #fff 0%, #EEF4E6 100%);
+  box-shadow: 0 0 0 1px rgba(62,106,44,.2), inset 0 0 0 1px rgba(255,255,255,.8), 0 14px 34px rgba(62,106,44,.1); }
+.ug-now-item::after { content: ""; position: absolute; left: 22px; top: 0; width: 46px; height: 3px; border-radius: 0 0 3px 3px; background: linear-gradient(90deg, #3E6A2C, #6F9A45); }
+.ug-now-no { position: absolute; right: 18px; top: 6px; font-family: var(--serif); font-size: 60px; font-weight: 700; line-height: 1; color: #3E6A2C; opacity: .09; }
+.ug-now-item .ug-ic { margin-bottom: 16px; }
+.ug-now-item h3 { font-size: 19px; color: #23401A; margin: 0 0 8px; }
+.ug-now-item p { margin: 0; font-size: 15px; line-height: 1.7; color: #55554f; }
+.ug-now-item p b { color: #3E6A2C; }
+
+/* 3일장 */
+.ug-days { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 14px; counter-reset: d; }
+.ug-day { position: relative; padding: 22px 20px 18px; border-radius: 18px; background: #fff;
+  box-shadow: 0 0 0 1px rgba(176,138,62,.28), inset 0 0 0 1px rgba(255,255,255,.9), 0 12px 28px rgba(120,90,30,.08); }
+.ug-day-chip { display: inline-block; padding: 4px 12px; border-radius: 99px; font-size: 13px; font-weight: 700; color: #fff; letter-spacing: .02em;
+  background: radial-gradient(circle at 30% 25%, #D7B460, #A9822F 75%); box-shadow: 0 4px 10px rgba(169,130,47,.25); }
+.ug-day h3 { font-size: 19px; color: #5A3E0E; margin: 12px 0 10px; }
+.ug-day ul { list-style: none; margin: 0; padding: 0; }
+.ug-day ul li { position: relative; padding: 6px 0 6px 16px; font-size: 14.5px; line-height: 1.55; color: #55554f; border-top: 1px dashed rgba(176,138,62,.25); }
+.ug-day ul li:first-child { border-top: 0; }
+.ug-day ul li::before { content: ""; position: absolute; left: 2px; top: 14px; width: 5px; height: 5px; border-radius: 50%; background: #B08A3E; }
+.ug-day ul li small { color: #8a7a5a; }
+.ug-day ul li b { color: #5A3E0E; }
+.ug-day:last-child { background: linear-gradient(160deg, #fff 0%, #EEF4E6 100%); box-shadow: 0 0 0 1px rgba(62,106,44,.28), 0 12px 28px rgba(62,106,44,.1); }
+.ug-day:last-child .ug-day-chip { background: radial-gradient(circle at 30% 25%, #6F9A45, #3E6A2C 75%); }
+.ug-day:last-child h3 { color: #23401A; }
+
+/* 꽃길숲 절차 */
+.ug-flow { list-style: none; margin: 30px 0 0; padding: 0; position: relative; }
+.ug-flow::before { content: ""; position: absolute; left: 21px; top: 22px; bottom: 22px; width: 2px; background: linear-gradient(#6F9A45, rgba(111,154,69,.15)); }
+.ug-flow > li { position: relative; display: flex; gap: 16px; align-items: flex-start; padding: 0 0 18px; }
+.ug-flow-no { position: relative; z-index: 1; flex: none; display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%;
+  color: #fff; font-family: var(--serif); font-size: 18px; font-weight: 700; background: radial-gradient(circle at 30% 25%, #6F9A45, #3E6A2C 70%);
+  box-shadow: 0 0 0 4px #fff, 0 0 0 5px rgba(62,106,44,.3), 0 8px 18px rgba(62,106,44,.28); }
+.ug-flow > li > div { flex: 1; padding: 14px 18px; border-radius: 16px; background: linear-gradient(160deg, #fff 0%, #F3F6EA 100%); box-shadow: 0 0 0 1px rgba(62,106,44,.15), 0 8px 20px rgba(62,106,44,.06); }
+.ug-flow h3 { font-size: 18px; color: #23401A; margin: 0 0 4px; }
+.ug-flow p { margin: 0; font-size: 14.5px; line-height: 1.65; color: #55554f; }
+.ug-flow p b { color: #9E3D2A; }
+
+/* 서류 · 팁 */
+.ug-docs { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 14px; }
+.ug-doc { display: flex; gap: 16px; align-items: flex-start; padding: 20px; border-radius: 18px; background: linear-gradient(160deg, #fff 0%, #FBF5E6 100%);
+  box-shadow: 0 0 0 1px rgba(176,138,62,.3), inset 0 0 0 1px rgba(255,255,255,.9), 0 12px 26px rgba(120,90,30,.08); }
+.ug-doc .ug-ic { width: 50px; height: 50px; }
+.ug-doc .ug-ic svg { width: 26px; height: 26px; }
+.ug-doc h3 { font-size: 18px; color: #5A3E0E; margin: 2px 0 6px; }
+.ug-doc h3 em { font-style: normal; font-family: var(--sans, inherit); font-size: 12px; font-weight: 700; color: #A9822F; padding: 2px 8px; border-radius: 99px; background: rgba(215,180,96,.18); margin-left: 6px; vertical-align: 2px; }
+.ug-doc p { margin: 0; font-size: 14.5px; line-height: 1.6; color: #55554f; }
+.ug-note { margin: 14px 0 0; font-size: 13px; color: #8a8a7a; }
+.ug-sub { font-size: 20px; color: #23401A; margin: 40px 0 0; }
+.ug-tips { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.ug-tips li { padding: 18px 16px; border-radius: 16px; background: #fff; box-shadow: 0 0 0 1px rgba(62,106,44,.16), 0 8px 20px rgba(62,106,44,.06); }
+.ug-tips b { display: block; font-family: var(--serif); font-size: 24px; color: #3E6A2C; line-height: 1.2; }
+.ug-tips p { margin: 8px 0 6px; font-size: 14px; line-height: 1.6; color: #55554f; }
+.ug-tips small { font-size: 11.5px; color: #9a9a8a; }
+
+/* FAQ + 상담 */
+.ug-faq { margin-top: 24px; }
+.ug-help { margin-top: 34px; display: grid; gap: 18px; padding: 24px 22px; border-radius: 22px; background: linear-gradient(120deg, #FFFDF6 0%, #F8F0DC 100%);
+  box-shadow: 0 0 0 1px rgba(176,138,62,.35), inset 0 0 0 1px rgba(255,255,255,.85), 0 16px 36px rgba(120,90,30,.12); }
+.ug-help-txt b { display: block; font-family: var(--serif); font-size: 20px; color: #5A3E0E; }
+.ug-help-txt p { margin: 6px 0 0; font-size: 15px; line-height: 1.65; color: #6b5a3a; }
+.ug-help-btns { display: flex; flex-wrap: wrap; gap: 10px; }
+.ug-btn { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; min-height: 52px; padding: 8px 22px; border-radius: 14px;
+  font-weight: 700; font-size: 15px; color: #5A3E0E; text-decoration: none; background: #fff; box-shadow: 0 0 0 1px rgba(176,138,62,.45); transition: transform .2s ease, box-shadow .2s ease; }
+.ug-btn small { font-size: 12px; font-weight: 500; opacity: .85; letter-spacing: .02em; }
+.ug-btn--main { flex: 1; color: #fff; background: linear-gradient(160deg, #4E7A2E, #2F5520); box-shadow: 0 0 0 1px rgba(255,255,255,.2) inset, 0 10px 22px rgba(47,85,32,.28); }
+.ug-btn:hover { transform: translateY(-2px); }
+
+@media (min-width: 768px) {
+  .ug-now { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .ug-days { grid-template-columns: repeat(4, 1fr); }
+  .ug-docs { grid-template-columns: 1fr 1fr; }
+  .ug-tips { grid-template-columns: repeat(4, 1fr); }
+  .ug-flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+  .ug-flow::before { left: 22px; right: 22px; top: 21px; bottom: auto; width: auto; height: 2px; background: linear-gradient(90deg, #6F9A45, rgba(111,154,69,.2)); }
+  .ug-flow > li { flex-direction: column; gap: 14px; padding: 0; }
+  .ug-flow > li > div { width: 100%; height: 100%; box-sizing: border-box; }
+  .ug-help { grid-template-columns: auto 1fr auto; align-items: center; padding: 26px 30px; gap: 22px; }
+  .ug-help .ug-ic { width: 62px; height: 62px; }
+  .ug-help-btns { flex-wrap: nowrap; }
+  .ug-btn--main { flex: none; }
+}
