@@ -1130,3 +1130,28 @@ body { background: #FFFFFF; }
 
 .flex-break { flex-basis: 100%; height: 0; }
 .visit-must--hero { flex-basis: auto; }
+
+/* ---------- 수목장 안내: 전나무 추모목 · 비교 · 실제 가격표 ---------- */
+@media (min-width: 900px) { .tree-grid--3 { grid-template-columns: repeat(3, 1fr); } }
+.compare-sec { background: #fff; }
+.compare-tbl { width: 100%; border-collapse: collapse; background: #fff; font-size: 16px; }
+.compare-tbl th, .compare-tbl td { padding: 14px 12px; border-bottom: 1px solid var(--hair); text-align: left; vertical-align: top; }
+.compare-tbl thead th { font-size: 15px; color: var(--muted); font-weight: 700; background: #F7F6EE; }
+.compare-tbl thead th.ours { background: var(--olive); color: #fff; }
+.compare-tbl tbody th { width: 22%; color: var(--green); font-weight: 700; }
+.compare-tbl td { color: #6b6b66; }
+.compare-tbl td.ours { background: #F4F7EA; color: #2E3B12; }
+.compare-tbl td.ours b { color: var(--rust); }
+@media (min-width: 768px) { .compare-tbl th, .compare-tbl td { padding: 18px 20px; font-size: 17px; } }
+.price-tbl--real td.price { font-weight: 700; color: #2E3B12; white-space: nowrap; }
+.price-tbl--real td { white-space: nowrap; }
+.price-tbl--real tbody th small { white-space: normal; }
+@media (max-width: 600px) { .price-tbl--real th, .price-tbl--real td { padding: 10px 6px; font-size: 14px; } .price-tbl--real thead th { font-size: 13px; } }
+@media (max-width: 600px) {
+  .price-tbl--real th, .price-tbl--real td { padding: 9px 4px; font-size: 13px; }
+  .price-tbl--real tbody th small { font-size: 11px; }
+  .price-tbl--real td.price { font-size: 13px; letter-spacing: -.02em; }
+  .compare-tbl th, .compare-tbl td { padding: 12px 8px; font-size: 14px; }
+  .compare-tbl tbody th { width: 20%; }
+  .compare-tbl td:not(.ours) { width: 30%; }
+}
