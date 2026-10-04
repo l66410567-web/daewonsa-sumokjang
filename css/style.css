@@ -1719,3 +1719,7 @@ body { background: #FFFFFF; }
 .pc-perks li::before { content: "✓"; margin-right: 5px; color: var(--c, #9E3D2A); font-weight: 700; }
 .path-card .pc-tel { margin: 0 0 18px; font-size: 15px; color: #55554f; white-space: nowrap; }
 .path-card .pc-tel b { font-size: 17px; letter-spacing: .03em; color: var(--deep, #6E2414); }
+.path-card .pc-benefit { margin: -6px 0 16px; padding: 10px 14px; border-radius: 12px; display: flex; flex-direction: column; gap: 2px;
+  background: rgba(255,255,255,.75); box-shadow: 0 0 0 1px color-mix(in srgb, var(--c, #9E3D2A) 22%, transparent); }
+.path-card .pc-benefit span { font-size: 12.5px; letter-spacing: .02em; color: #8a6a5a; }
+.path-card .pc-benefit b { font-size: 15px; color: var(--deep, #6E2414); letter-spacing: -.01em; }
