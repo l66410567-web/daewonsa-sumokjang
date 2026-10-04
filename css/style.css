@@ -1643,3 +1643,5 @@ body { background: #FFFFFF; }
 .closing h2 { text-shadow: 0 2px 18px rgba(0,0,0,.45); }
 .closing p { color: #F1EEDF; text-shadow: 0 1px 10px rgba(0,0,0,.5); }
 @media (min-width: 1024px) { .closing { background-attachment: scroll; padding: 130px 0; } }
+.gj-note { margin: 0 0 10px; padding: 10px 14px; border-radius: 12px; font-size: 15px; color: #23401A; background: linear-gradient(120deg, #F1F6E6, #E9F0DA); box-shadow: 0 0 0 1px rgba(62,106,44,.18); }
+.gj-note b { color: #3E6A2C; }
