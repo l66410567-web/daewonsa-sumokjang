@@ -1225,3 +1225,8 @@ body { background: #FFFFFF; }
   .visit-must--light b::after { display: none; }
   .visit-must--light .vm-sub { display: block; margin-top: 2px; }
 }
+
+/* 히어로: 상담 안내 줄 삭제에 맞춰 문구 위치 재조정 */
+.mhero-copy { bottom: 340px; }
+@media (min-width: 768px) { .mhero-copy { bottom: 288px; } .mhero-cta { bottom: 120px; } }
+@media (min-width: 768px) and (max-height: 820px) { .mhero-copy { bottom: 258px; } .mhero-cta { bottom: 100px; } }
