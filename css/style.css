@@ -994,3 +994,11 @@ body { background: #FFFFFF; }
 .merit-sec--light .merit b { color: var(--green); }
 .merit-sec--light .merit b::after { background: var(--gold); }
 .merit-sec--light .merit span { color: var(--muted); }
+
+/* 상을 당하셨나요 카드: 흰 바탕으로 되돌림(디자인 요소 유지) */
+.path-card--urgent { background: #fff; border-color: var(--hair); color: var(--text); }
+.path-card--urgent h2 { color: var(--green); }
+.path-card--urgent p { color: var(--muted); }
+.path-card--urgent .tag { color: var(--rust) !important; }
+.path-card--urgent .go { color: var(--rust); border-top-color: var(--hair); }
+.path-card--urgent:hover .go::after { background: var(--rust); color: #fff; border-color: var(--rust); }
