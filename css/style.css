@@ -1561,3 +1561,6 @@ body { background: #FFFFFF; }
   .ug-help-btns { flex-wrap: nowrap; }
   .ug-btn--main { flex: none; }
 }
+/* 가격표: 5위 이상은 안내 문구로 */
+.price-tbl--real tr.tr-more td { background: linear-gradient(120deg, #FBF7EA, #F4F7EA); color: #5A3E0E; font-family: var(--serif); font-weight: 700; }
+.price-tbl--real tr.tr-more td[colspan] { white-space: normal; font-family: inherit; font-weight: 500; font-size: 15px; color: #6b5a3a; letter-spacing: -.01em; }
