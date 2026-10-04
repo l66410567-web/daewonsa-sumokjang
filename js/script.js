@@ -112,6 +112,16 @@
     toTop.addEventListener('click', function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
   }
 
+  /* 가까운 거리 동심원: 화면에 들어오면 퍼지는 연출 시작 */
+  var nearMap = document.querySelector('.near-map');
+  if (nearMap) {
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es, ob) {
+        es.forEach(function (e) { if (e.isIntersecting) { nearMap.classList.add('in'); ob.disconnect(); } });
+      }, { threshold: 0.35 }).observe(nearMap);
+    } else { nearMap.classList.add('in'); }
+  }
+
   /* 꽃길 따라가기: 스크롤하면 진행선이 채워지고 지점이 나타남 */
   var trail = document.querySelector('.trail');
   if (trail) {
