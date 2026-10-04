@@ -1159,3 +1159,23 @@ body { background: #FFFFFF; }
 /* 스님들의 부도를 모셔 온 터 — 강조 단락 */
 .draft--sacred { background: #F4EFE4; border-color: #E6DCC8; }
 .draft--sacred h2::before { background: var(--gold); }
+
+/* ---------- 히어로: 문구를 버튼 묶음 위에 고정(낮은 화면에서 겹침 방지) ---------- */
+.mhero { height: max(640px, 88vh); }
+.mhero-copy { top: auto; bottom: 372px; transform: none; }
+@media (min-width: 768px) {
+  .mhero-copy { bottom: 300px; }
+}
+/* 노트북 등 세로가 낮은 화면: 제목·여백 살짝 줄임 */
+@media (min-width: 768px) and (max-height: 820px) {
+  .mhero { height: max(600px, 92vh); }
+  .mhero h1, .mhero .mhero-title { font-size: 44px; margin-bottom: 10px; }
+  .mhero-copy p:not(.mhero-title) { font-size: 17px; }
+  .mhero-kicker { margin-bottom: 8px; }
+  .mhero-cta { bottom: 104px; }
+  .mhero-ctrl { bottom: 56px; }
+  .mhero-copy { bottom: 262px; }
+}
+@media (min-width: 768px) and (max-height: 820px) { .mhero-copy { bottom: 286px; } }
+@media (min-width: 768px) { .mhero-copy { bottom: 316px; } }
+@media (min-width: 768px) and (max-height: 820px) { .mhero-copy { bottom: 286px; } }
