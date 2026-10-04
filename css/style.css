@@ -1179,3 +1179,49 @@ body { background: #FFFFFF; }
 @media (min-width: 768px) and (max-height: 820px) { .mhero-copy { bottom: 286px; } }
 @media (min-width: 768px) { .mhero-copy { bottom: 316px; } }
 @media (min-width: 768px) and (max-height: 820px) { .mhero-copy { bottom: 286px; } }
+
+/* =========================================================
+   '방문 전 답사 예약 필수' 안내 — 고급스럽게 통일 (금색 가는 선 · 올리브 글씨)
+   ========================================================= */
+.visit-must {
+  gap: 10px; padding: 9px 20px; border-radius: 999px; font-size: 14px; letter-spacing: .01em;
+  background: #FBFAF4; border: 1px solid rgba(176,138,62,.55); color: #4a4a45; box-shadow: none;
+}
+.visit-must svg { width: 17px; height: 17px; stroke: var(--gold); stroke-width: 1.5; }
+.visit-must b { color: var(--green); font-weight: 700; letter-spacing: .02em; }
+.visit-must span { color: #5b5b57; }
+.visit-must b::after { content: ""; display: inline-block; width: 1px; height: 11px; background: rgba(176,138,62,.6); margin: 0 10px; vertical-align: -1px; }
+/* 히어로: 버튼과 같은 유리 질감 */
+.visit-must--hero {
+  background: rgba(20,28,2,.28); border: 1px solid rgba(226,207,142,.7); color: #fff;
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); box-shadow: none; max-width: none;
+}
+.visit-must--hero svg { stroke: #E2CF8E; }
+.visit-must--hero b { color: var(--temple-yellow); }
+.visit-must--hero span { color: rgba(255,255,255,.9); }
+.visit-must--hero b::after { background: rgba(226,207,142,.7); }
+.visit-must--light { background: #FBFAF4; border-color: rgba(176,138,62,.55); }
+.visit-must--light b, .visit-must--light span { color: inherit; }
+.visit-must--light b { color: var(--green); }
+/* 안내 상자 */
+.visit-note { background: #fff; border: 1px solid var(--hair); border-left: 3px solid var(--gold); border-radius: 14px; box-shadow: var(--shadow); }
+.visit-note svg { stroke: var(--gold); stroke-width: 1.5; }
+.visit-note b { color: var(--green); font-family: var(--serif); font-weight: 700; }
+.visit-note span { color: var(--muted); }
+.visit-note--top { background: #fff; }
+.must-inline { color: var(--temple-yellow); font-family: var(--serif); letter-spacing: .02em; }
+@media (max-width: 767px) {
+  .visit-must { padding: 8px 14px; font-size: 13px; gap: 8px; }
+  .visit-must b::after { margin: 0 7px; }
+}
+@media (max-width: 767px) { .visit-must--hero span { display: none; } .visit-must--hero b::after { display: none; } .visit-must--hero { align-self: center; margin-left: auto; margin-right: auto; } }
+
+.vm-sub { font-style: normal; }
+@media (max-width: 767px) {
+  .visit-must--hero span { display: inline; }
+  .visit-must--hero .vm-sub { display: none; }
+  .visit-must--light { display: flex; align-items: flex-start; border-radius: 14px; }
+  .visit-must--light b { display: block; }
+  .visit-must--light b::after { display: none; }
+  .visit-must--light .vm-sub { display: block; margin-top: 2px; }
+}
