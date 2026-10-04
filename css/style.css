@@ -1155,3 +1155,7 @@ body { background: #FFFFFF; }
   .compare-tbl tbody th { width: 20%; }
   .compare-tbl td:not(.ours) { width: 30%; }
 }
+
+/* 스님들의 부도를 모셔 온 터 — 강조 단락 */
+.draft--sacred { background: #F4EFE4; border-color: #E6DCC8; }
+.draft--sacred h2::before { background: var(--gold); }
