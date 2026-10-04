@@ -1647,3 +1647,5 @@ body { background: #FFFFFF; }
 .gj-note b { color: #3E6A2C; }
 .hl-sacred { display: block; margin-top: 12px; font-family: var(--serif); font-weight: 700; color: #3F5C03; line-height: 1.7; }
 .hl-sacred { background: linear-gradient(transparent 62%, rgba(242,233,138,.65) 62%); display: inline; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.hl-mark { background: linear-gradient(transparent 62%, rgba(242,233,138,.65) 62%); box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.sec-title .hl-mark { background: linear-gradient(transparent 68%, rgba(242,233,138,.6) 68%); }
