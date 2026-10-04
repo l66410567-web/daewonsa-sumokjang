@@ -1323,3 +1323,54 @@ body { background: #FFFFFF; }
 @media (min-width: 1024px) { .brand img { width: 42px; height: 46px; } }
 .f-brand img { width: 40px; height: 44px; background: none; padding: 0; border-radius: 0; }
 .closing-mark { width: 52px; height: 57px; background: none; padding: 0; border-radius: 0; }
+
+/* =========================================================
+   꽃길숲을 선택하는 이유 — 6가지 색 · 메달 아이콘 · 카드형 (고급화)
+   ========================================================= */
+.merit2 { list-style: none; padding: 0; margin: 40px 0 0; display: grid; grid-template-columns: 1fr; gap: 16px; }
+.m2 {
+  --c: #4F700A; --c2: #6E8F22; --soft: #F3F6EA; --deep: #2E3B12;
+  position: relative; overflow: hidden; border-radius: 20px; padding: 28px 24px 26px;
+  background: linear-gradient(160deg, #fff 0%, var(--soft) 100%);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--c) 22%, transparent), inset 0 0 0 1px rgba(255,255,255,.8), 0 14px 34px color-mix(in srgb, var(--c) 12%, transparent);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.m2:hover { transform: translateY(-5px); box-shadow: 0 0 0 1px color-mix(in srgb, var(--c) 40%, transparent), inset 0 0 0 1px rgba(255,255,255,.8), 0 24px 48px color-mix(in srgb, var(--c) 20%, transparent); }
+.m2::after { content: ""; position: absolute; left: 24px; top: 0; width: 46px; height: 3px; border-radius: 0 0 3px 3px; background: linear-gradient(90deg, var(--c), var(--c2)); }
+.m2-num { position: absolute; right: 18px; top: 6px; font-family: var(--serif); font-size: 64px; font-weight: 700; line-height: 1; color: var(--c); opacity: .09; letter-spacing: -.02em; }
+.m2-ic {
+  display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 50%; margin-bottom: 18px;
+  background: radial-gradient(circle at 30% 25%, var(--c2), var(--c) 70%);
+  box-shadow: 0 0 0 4px #fff, 0 0 0 5px color-mix(in srgb, var(--c) 30%, transparent), 0 10px 22px color-mix(in srgb, var(--c) 35%, transparent);
+  transition: transform .4s ease;
+}
+.m2:hover .m2-ic { transform: rotate(-6deg) scale(1.06); }
+.m2-ic svg { width: 34px; height: 34px; fill: none; stroke: #fff; stroke-width: 1.35; stroke-linecap: round; stroke-linejoin: round; }
+.m2 b { display: block; font-family: var(--serif); font-size: 21px; color: var(--deep); letter-spacing: -.01em; }
+.m2 b::after { content: ""; display: block; width: 28px; height: 1px; background: var(--c); opacity: .5; margin: 12px 0 10px; }
+.m2-desc { display: block; font-size: 15px; line-height: 1.65; color: #55554f; }
+.m2--forest  { --c: #3E6A2C; --c2: #6F9A45; --soft: #EEF4E6; --deep: #23401A; }
+.m2--temple  { --c: #8A5A2B; --c2: #B9874E; --soft: #F8F0E4; --deep: #5A3814; }
+.m2--blossom { --c: #C2566F; --c2: #E68AA0; --soft: #FCEEF1; --deep: #8E2F47; }
+.m2--stone   { --c: #56627A; --c2: #8592AA; --soft: #EEF1F6; --deep: #333E54; }
+.m2--teal    { --c: #2C6E6E; --c2: #4E9C96; --soft: #E8F3F1; --deep: #164B4B; }
+.m2--amber   { --c: #B07624; --c2: #D9A350; --soft: #FBF2E2; --deep: #74480C; }
+@media (min-width: 640px) { .merit2 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) {
+  .merit2 { grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .m2 { padding: 36px 32px 32px; }
+  .m2::after { left: 32px; }
+  .m2-ic { width: 72px; height: 72px; }
+  .m2-ic svg { width: 38px; height: 38px; }
+  .m2 b { font-size: 23px; }
+  .m2-desc { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .m2, .m2-ic { transition: none; } }
+@media (max-width: 639px) {
+  .m2 { display: grid; grid-template-columns: 60px 1fr; column-gap: 16px; align-items: start; padding: 22px 18px 20px; }
+  .m2-ic { grid-row: 1 / span 2; width: 60px; height: 60px; margin: 2px 0 0; }
+  .m2-ic svg { width: 32px; height: 32px; }
+  .m2 b { font-size: 19px; }
+  .m2 b::after { margin: 8px 0 6px; }
+  .m2-num { font-size: 46px; right: 14px; top: 4px; }
+}
