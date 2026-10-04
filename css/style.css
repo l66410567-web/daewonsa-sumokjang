@@ -981,3 +981,16 @@ body { background: #FFFFFF; }
   .merit-sec--dark .merit b { font-size: 22px; }
   .merit-sec--dark .merit span { font-size: 15px; }
 }
+
+/* 선택 이유: 바탕만 흰색으로 되돌림(디자인 요소는 유지) */
+.merit-sec--light { background: #fff; color: var(--text); }
+.merit-sec--light::before { display: none; }
+.merit-sec--light .eyebrow { color: var(--rust); }
+.merit-sec--light .sec-title { color: var(--green); }
+.merit-sec--light .merit { background: var(--hair); border-color: var(--hair); border-radius: 18px; }
+.merit-sec--light .merit li { background: #fff; }
+.merit-sec--light .merit li:hover { background: #F7F6EE; }
+.merit-sec--light .merit svg { stroke: var(--olive); }
+.merit-sec--light .merit b { color: var(--green); }
+.merit-sec--light .merit b::after { background: var(--gold); }
+.merit-sec--light .merit span { color: var(--muted); }
