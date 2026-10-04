@@ -1645,3 +1645,5 @@ body { background: #FFFFFF; }
 @media (min-width: 1024px) { .closing { background-attachment: scroll; padding: 130px 0; } }
 .gj-note { margin: 0 0 10px; padding: 10px 14px; border-radius: 12px; font-size: 15px; color: #23401A; background: linear-gradient(120deg, #F1F6E6, #E9F0DA); box-shadow: 0 0 0 1px rgba(62,106,44,.18); }
 .gj-note b { color: #3E6A2C; }
+.hl-sacred { display: block; margin-top: 12px; font-family: var(--serif); font-weight: 700; color: #3F5C03; line-height: 1.7; }
+.hl-sacred { background: linear-gradient(transparent 62%, rgba(242,233,138,.65) 62%); display: inline; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
