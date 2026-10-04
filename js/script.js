@@ -69,6 +69,8 @@
       cur = (n + slides.length) % slides.length;
       slides.forEach(function (s, i) { s.classList.toggle('is-active', i === cur); });
       dotBtns.forEach(function (b, i) { b.setAttribute('aria-current', i === cur ? 'true' : 'false'); });
+      var cnt = box.querySelector('.slider-count');
+      if (cnt) cnt.textContent = ('0' + (cur + 1)).slice(-2) + ' / ' + ('0' + slides.length).slice(-2);
     }
     function restart() {
       clearInterval(timer);
@@ -90,6 +92,25 @@
     box.addEventListener('mouseleave', restart);
     go(0); restart();
   });
+
+  /* 사진 카드 캐러셀 (data-carousel): 이전/다음 버튼으로 한 장씩 */
+  document.querySelectorAll('[data-carousel]').forEach(function (car) {
+    var track = car.querySelector('.car-track');
+    var scope = car.closest('section') || document;
+    var step = function () { var c = track.querySelector('a'); return c ? c.getBoundingClientRect().width + 14 : 280; };
+    var prev = scope.querySelector('.car-prev'), next = scope.querySelector('.car-next');
+    if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    if (next) next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+  });
+
+  /* 맨 위로 버튼 */
+  var toTop = document.querySelector('.to-top');
+  if (toTop) {
+    var onScroll = function () { toTop.classList.toggle('show', window.scrollY > 500); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    toTop.addEventListener('click', function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
 
   /* 꽃길 따라가기: 스크롤하면 진행선이 채워지고 지점이 나타남 */
   var trail = document.querySelector('.trail');
