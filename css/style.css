@@ -1609,3 +1609,27 @@ body { background: #FFFFFF; }
 .f-temple small { display: block; font-size: 12px; line-height: 1.45; color: #55524A; letter-spacing: .04em; text-align: right; }
 .f-temple strong { font-family: "Noto Serif KR", var(--serif); font-size: 34px; line-height: 1; font-weight: 700; color: #2B2722; letter-spacing: .08em; }
 .f-site { margin: 0 0 14px; padding-left: 52px; font-family: var(--serif); font-size: 17px; font-weight: 700; color: #4F700A; letter-spacing: .02em; }
+
+/* 답사 예약 혜택 · 들어오는 길 */
+.vn-gift { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; padding: 5px 12px 5px 8px; border-radius: 99px; font-style: normal; font-size: 13.5px; color: #3E6A2C;
+  background: linear-gradient(120deg, #F1F6E6, #E6EFD4); box-shadow: 0 0 0 1px rgba(62,106,44,.22); }
+.vn-gift::before { content: ""; width: 18px; height: 18px; border-radius: 50%; flex: none;
+  background: radial-gradient(circle at 30% 25%, #6F9A45, #3E6A2C 70%) ; -webkit-mask: none;
+  box-shadow: inset 0 0 0 5px transparent; }
+.vn-gift::before { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 18c0-7 5-12 13-12 0 8-5 13-12 13'/%3E%3Cpath d='M6 18l6-6'/%3E%3C/svg%3E") center/12px no-repeat, radial-gradient(circle at 30% 25%, #6F9A45, #3E6A2C 70%); }
+.vn-gift b { font-weight: 700; color: #23401A; }
+.visit-note .vn-gift { display: inline-flex; }
+.vn-gift-line { margin: 0 0 8px; }
+.way-grid { display: grid; gap: 14px; margin: 16px 0 0; }
+.way-grid figure { margin: 0; position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 0 0 1px rgba(176,138,62,.35), 0 14px 30px rgba(52,72,6,.12); }
+.way-grid img { display: block; width: 100%; height: 240px; object-fit: cover; }
+.way-grid figcaption { position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: center; gap: 10px; padding: 26px 14px 12px; font-size: 14.5px; color: #fff;
+  background: linear-gradient(transparent, rgba(20,28,8,.72)); }
+.way-grid figcaption span { flex: none; display: flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; font-weight: 700; font-size: 13px;
+  background: radial-gradient(circle at 30% 25%, #6F9A45, #3E6A2C 70%); box-shadow: 0 0 0 2px rgba(255,255,255,.85); }
+.way-warn { margin: 14px 0 0; padding: 12px 14px; border-radius: 12px; font-size: 14.5px; color: #6E2414; background: #FBEEE8; box-shadow: 0 0 0 1px rgba(158,61,42,.2); }
+@media (min-width: 768px) { .way-grid { grid-template-columns: 1fr 1fr; } .way-grid img { height: 300px; } }
+.vn-gift, .visit-note .vn-gift { display: inline-block; line-height: 1.5; padding: 6px 14px 6px 10px; }
+.vn-gift::before { display: inline-block; vertical-align: -4px; margin-right: 6px; }
+.vn-gift b, .visit-note .vn-gift b { display: inline; font-family: inherit; font-size: inherit; color: #23401A; margin: 0; }
+.vn-gift, .visit-note .vn-gift { border-radius: 12px; }
