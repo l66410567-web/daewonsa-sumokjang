@@ -898,3 +898,26 @@ body { background: #FFFFFF; }
 }
 .to-top.show { opacity: 1; pointer-events: auto; }
 @media (min-width: 1024px) { .to-top { bottom: 28px; right: 28px; width: 52px; height: 52px; } }
+
+/* ---------- 히어로 부제 줄맞춤 ---------- */
+.mhero-copy p:not(.mhero-title) { line-height: 1.75; text-wrap: balance; }
+@media (max-width: 767px) { .mhero-copy p:not(.mhero-title) { font-size: 15.5px; } }
+
+/* ---------- 가까운 거리 ---------- */
+.near-sec { background: #fff; }
+.near { display: grid; gap: 28px; align-items: center; }
+.near-map { max-width: 300px; margin: 0 auto; width: 100%; }
+.near-map .ring { fill: none; stroke: var(--olive); stroke-dasharray: 3 5; }
+.near-map .r1 { fill: rgba(88,122,11,.12); stroke-dasharray: none; }
+.near-map .r2 { fill: rgba(88,122,11,.06); }
+.near-map .r3 { opacity: .7; }
+.near-map .dot { fill: var(--rust); }
+.near-map text { font-family: var(--sans); text-anchor: middle; font-weight: 700; fill: var(--green); font-size: 15px; }
+.near-map .lbl-c { fill: var(--rust); font-family: var(--serif); font-size: 17px; }
+.near-map .lbl-s { font-size: 13px; fill: var(--muted); }
+.near-list { list-style: none; padding: 0; margin: 20px 0 10px; display: grid; gap: 10px; }
+.near-list li { display: flex; align-items: baseline; gap: 14px; padding: 14px 18px; border: 1px solid var(--hair); border-radius: 14px; background: #F7F6EE; }
+.near-list b { flex: none; min-width: 96px; font-family: var(--serif); font-size: 24px; color: var(--green); }
+.near-list span { font-size: 16px; color: #3d3d3a; }
+.near-list--plain li { background: #fff; }
+@media (min-width: 1024px) { .near { grid-template-columns: 340px 1fr; gap: 64px; } .near-map { max-width: 340px; } .near-list b { font-size: 28px; min-width: 120px; } }
