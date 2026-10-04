@@ -1680,3 +1680,34 @@ body { background: #FFFFFF; }
 }
 .header-call svg { width: 28px; height: 28px; padding: 6px; box-sizing: border-box; border-radius: 50%; color: #3F5C02; background: radial-gradient(circle at 30% 25%, #F6E7B0, #D7B460 75%); }
 .header-call:hover { background: rgba(232,207,134,.16); color: #fff; border-color: #F2E3A6; }
+
+/* =========================================================
+   신뢰 띠 (trust2): 밝은 한지 바탕 · 금테 액자 · 다섯 메달
+   ========================================================= */
+.trust2 { padding: 64px 0; background: linear-gradient(180deg, #FBF8EE 0%, #F4EFE0 100%); }
+.tr-head { text-align: center; }
+.tr-head .eyebrow { justify-content: center; }
+.tr-head h2 { font-size: 26px; color: #23401A; margin: 8px 0 0; line-height: 1.45; }
+.tr-list { list-style: none; margin: 30px 0 0; padding: 8px 22px; border-radius: 22px; background: #fff;
+  box-shadow: 0 0 0 1px rgba(176,138,62,.35), inset 0 0 0 6px #fff, inset 0 0 0 7px rgba(176,138,62,.18), 0 18px 40px rgba(90,70,20,.10); }
+.tr-list li { display: grid; grid-template-columns: 52px 1fr; column-gap: 16px; align-items: center; padding: 18px 4px; border-top: 1px solid rgba(176,138,62,.2); }
+.tr-list li:first-child { border-top: 0; }
+.tr-ic { grid-row: span 2; display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 50%;
+  background: radial-gradient(circle at 30% 25%, #7FA24B, #3E6A2C 70%);
+  box-shadow: 0 0 0 3px #fff, 0 0 0 4px rgba(176,138,62,.45), 0 8px 18px rgba(62,106,44,.25); }
+.tr-ic svg { width: 28px; height: 28px; fill: none; stroke: #fff; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.tr-list b { font-family: var(--serif); font-size: 18px; color: #23401A; letter-spacing: -.01em; }
+.tr-desc { font-size: 15px; line-height: 1.6; color: #4A4A42; }
+.tr-desc br { display: none; }
+@media (min-width: 900px) {
+  .trust2 { padding: 84px 0; }
+  .tr-head h2 { font-size: 32px; }
+  .tr-list { display: grid; grid-template-columns: repeat(5, 1fr); padding: 34px 10px; margin-top: 40px; }
+  .tr-list li { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0; padding: 4px 16px; border-top: 0; border-left: 1px solid rgba(176,138,62,.25); }
+  .tr-list li:first-child { border-left: 0; }
+  .tr-ic { width: 64px; height: 64px; margin-bottom: 18px; }
+  .tr-ic svg { width: 34px; height: 34px; }
+  .tr-list b { font-size: 19px; margin-bottom: 8px; }
+  .tr-desc { font-size: 15px; }
+  .tr-desc br { display: inline; }
+}
