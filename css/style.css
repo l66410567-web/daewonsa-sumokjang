@@ -1374,3 +1374,64 @@ body { background: #FFFFFF; }
   .m2 b::after { margin: 8px 0 6px; }
   .m2-num { font-size: 46px; right: 14px; top: 4px; }
 }
+
+/* =========================================================
+   고급화 2차: 소개 사진 액자 · 답사 안내 · 두 갈래 카드 · 절차 · 목록 · FAQ
+   ========================================================= */
+/* 1) 메인 소개 사진: 사방 고른 금테 액자 */
+.intro-photo { margin: 12px; }
+.intro-photo img {
+  box-shadow: 0 0 0 10px #FBFAF4, 0 0 0 11px rgba(176,138,62,.55), 0 0 0 12px rgba(255,255,255,.9), 0 22px 46px rgba(52,72,6,.16);
+}
+.intro-photo figcaption { right: 12px; bottom: 12px; }
+
+/* 공통 메달 */
+.pc-ic, .visit-note > svg {
+  display: flex; align-items: center; justify-content: center; flex: none;
+  border-radius: 50%; background: radial-gradient(circle at 30% 25%, var(--c2), var(--c) 70%);
+  box-shadow: 0 0 0 4px #fff, 0 0 0 5px color-mix(in srgb, var(--c) 30%, transparent), 0 10px 22px color-mix(in srgb, var(--c) 32%, transparent);
+}
+
+/* 2-1) 답사 예약 안내: 금빛 메달 배너 */
+.visit-note {
+  --c: #A9822F; --c2: #D7B460;
+  align-items: center; gap: 18px; padding: 20px 22px; border-radius: 18px;
+  background: linear-gradient(120deg, #FFFDF6 0%, #F8F0DC 100%);
+  box-shadow: 0 0 0 1px rgba(176,138,62,.35), inset 0 0 0 1px rgba(255,255,255,.85), 0 14px 34px rgba(120,90,30,.12);
+}
+.visit-note > svg { width: 52px; height: 52px; padding: 13px; margin: 0; stroke: #fff; stroke-width: 1.6; }
+.visit-note b { color: #5A3E0E; font-size: 19px; }
+.visit-note span { color: #6b5a3a; }
+.visit-note--top { background: linear-gradient(120deg, #FFFDF6 0%, #F8F0DC 100%); }
+@media (min-width: 768px) { .visit-note > svg { width: 58px; height: 58px; padding: 14px; } .visit-note b { font-size: 21px; } }
+
+/* 2-2) 두 갈래 카드: 고유 색 · 메달 · 큰 번호 */
+.path-card {
+  --c: #3E6A2C; --c2: #6F9A45; --soft: #EEF4E6; --deep: #23401A;
+  background: linear-gradient(160deg, #fff 0%, var(--soft) 100%);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--c) 22%, transparent), inset 0 0 0 1px rgba(255,255,255,.8), 0 16px 38px color-mix(in srgb, var(--c) 12%, transparent);
+}
+.path-card--urgent { --c: #9E3D2A; --c2: #CF7457; --soft: #FBEEE8; --deep: #6E2414; background: linear-gradient(160deg, #fff 0%, var(--soft) 100%); color: var(--text); }
+.path-card:hover { box-shadow: 0 0 0 1px color-mix(in srgb, var(--c) 40%, transparent), inset 0 0 0 1px rgba(255,255,255,.8), 0 26px 52px color-mix(in srgb, var(--c) 20%, transparent); }
+.path-card::before { width: 52px; background: linear-gradient(90deg, var(--c), var(--c2)); }
+.path-card .pc-no { right: 22px; top: 10px; font-size: 64px; font-weight: 700; line-height: 1; letter-spacing: -.02em; color: var(--c); opacity: .09; }
+.pc-ic { width: 62px; height: 62px; margin-bottom: 18px; }
+.pc-ic svg { width: 32px; height: 32px; fill: none; stroke: #fff; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.path-card:hover .pc-ic { transform: rotate(-6deg) scale(1.06); }
+.pc-ic { transition: transform .4s ease; }
+.path-card .tag, .path-card--urgent .tag { color: var(--c) !important; }
+.path-card h2, .path-card--urgent h2 { color: var(--deep); }
+.path-card p, .path-card--urgent p { color: #55554f; }
+.path-card .go, .path-card--urgent .go { color: var(--c); border-top-color: color-mix(in srgb, var(--c) 18%, transparent); }
+.path-card .go::after { width: 44px; height: 44px; border: 0; color: #fff; background: radial-gradient(circle at 30% 25%, var(--c2), var(--c) 70%); box-shadow: 0 6px 14px color-mix(in srgb, var(--c) 30%, transparent); }
+.path-card:hover .go::after, .path-card--urgent:hover .go::after { background: radial-gradient(circle at 30% 25%, var(--c2), var(--c) 70%); color: #fff; transform: translateX(3px); }
+.path-card .go::after { transition: transform .25s ease; }
+@media (min-width: 768px) { .pc-ic { width: 68px; height: 68px; } .pc-ic svg { width: 36px; height: 36px; } }
+
+/* 3) 안치 절차 번호 · 거리 목록 · FAQ Q 도 메달 톤으로 */
+.steps li::before { background: radial-gradient(circle at 30% 25%, #6F9A45, #3E6A2C 70%); box-shadow: 0 0 0 3px #fff, 0 0 0 4px rgba(62,106,44,.3), 0 6px 14px rgba(62,106,44,.3); font-family: var(--serif); }
+.steps li { background: linear-gradient(160deg, #fff 0%, #F3F6EA 100%); }
+.near-list li { background: linear-gradient(120deg, #fff 0%, #F4F7EA 100%); }
+.near-list b { color: #3E6A2C; }
+.faq-item summary::before { content: "Q"; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; color: #fff; font-size: 15px; background: radial-gradient(circle at 30% 25%, #CF7457, #9E3D2A 70%); box-shadow: 0 4px 10px rgba(158,61,42,.25); margin-top: -2px; }
+.duo-faq li span { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; color: #fff; font-size: 13px; background: radial-gradient(circle at 30% 25%, #CF7457, #9E3D2A 70%); flex: none; }
