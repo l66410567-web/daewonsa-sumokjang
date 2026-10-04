@@ -1085,3 +1085,8 @@ body { background: #FFFFFF; }
 .soft-box .eyebrow { color: var(--brown); }
 .soft-box p { color: #3d3d3a; }
 @media (min-width: 768px) { .soft-box { padding: 44px 48px; } }
+
+/* 둘러보기: 추모목 숲 사진 3장 */
+.card-grid--3 { grid-template-columns: 1fr; }
+@media (min-width: 600px) { .card-grid--3 { grid-template-columns: repeat(3, 1fr); } }
+.card-grid--3 .photo { aspect-ratio: 2 / 3; }
