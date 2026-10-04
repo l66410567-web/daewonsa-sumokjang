@@ -766,3 +766,19 @@ body { background: #FFFFFF; }
 .trail-fill { background: linear-gradient(180deg, #F3C6CD, #D98C98); }
 .trail-stop.on::before { border-color: #D98C98; background: #FBEFF1; }
 .mbar a.mbar-call { background: var(--olive); }
+
+/* ---------- 정보 목록 · 연혁 · 문화재 ---------- */
+.sub-h { font-size: 20px; margin: 28px 0 12px; }
+.info-list, .heritage { list-style: none; padding: 0; margin: 8px 0 0; border-top: 1px solid var(--hair); }
+.info-list li, .heritage li { display: grid; gap: 2px; padding: 12px 0; border-bottom: 1px solid var(--hair); }
+.info-list b, .heritage b { color: var(--green); font-size: 16px; }
+.info-list span, .heritage span { color: #3d3d3a; font-size: 16px; }
+@media (min-width: 768px) {
+  .info-list li, .heritage li { grid-template-columns: 200px 1fr; gap: 16px; }
+}
+.timeline { list-style: none; padding: 0 0 0 18px; margin: 8px 0 0; border-left: 2px solid var(--hair); }
+.timeline li { position: relative; padding: 0 0 14px 14px; }
+.timeline li::before { content: ""; position: absolute; left: -25px; top: 8px; width: 10px; height: 10px; border-radius: 50%; background: #fff; border: 2px solid var(--rust); }
+.timeline b { display: block; color: var(--rust); font-size: 15px; letter-spacing: .03em; }
+.timeline span { font-size: 16px; color: #3d3d3a; }
+.visit-mini { display: block; font-size: 14px; color: var(--muted); margin-top: 2px; }
