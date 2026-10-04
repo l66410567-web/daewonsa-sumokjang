@@ -1315,3 +1315,11 @@ body { background: #FFFFFF; }
 .f-links { border-top-color: rgba(226,207,142,.25); }
 .pcard--plain::before { border: 0; inset: auto; }
 .pcard--plain { outline: 1px solid rgba(255,255,255,.28); outline-offset: -9px; }
+
+/* ---------- 새 로고(아치·벚꽃 나무·언덕) ---------- */
+.brand img { width: 36px; height: 40px; background: none; padding: 0; border-radius: 0; }
+.brand { gap: 12px; }
+.brand-text small { letter-spacing: .32em; }
+@media (min-width: 1024px) { .brand img { width: 42px; height: 46px; } }
+.f-brand img { width: 40px; height: 44px; background: none; padding: 0; border-radius: 0; }
+.closing-mark { width: 52px; height: 57px; background: none; padding: 0; border-radius: 0; }
