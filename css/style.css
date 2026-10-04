@@ -1435,3 +1435,33 @@ body { background: #FFFFFF; }
 .near-list b { color: #3E6A2C; }
 .faq-item summary::before { content: "Q"; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; color: #fff; font-size: 15px; background: radial-gradient(circle at 30% 25%, #CF7457, #9E3D2A 70%); box-shadow: 0 4px 10px rgba(158,61,42,.25); margin-top: -2px; }
 .duo-faq li span { display: inline-flex; align-items: center; justify-content: center; width: 26px; height: 26px; border-radius: 50%; color: #fff; font-size: 13px; background: radial-gradient(circle at 30% 25%, #CF7457, #9E3D2A 70%); flex: none; }
+
+/* =========================================================
+   수목장이란: 단면 그림 + 4단계 (간결형)
+   ========================================================= */
+.whatis { max-width: 980px; margin: 0 auto; padding: 26px 20px 22px; border-radius: 22px; background: linear-gradient(160deg, #fff 0%, #F3F6EA 100%);
+  box-shadow: 0 0 0 1px rgba(62,106,44,.18), inset 0 0 0 1px rgba(255,255,255,.85), 0 16px 38px rgba(62,106,44,.10); }
+.wi-head h2 { font-size: 23px; color: #23401A; margin: 6px 0 10px; }
+.wi-head p { font-size: 15px; line-height: 1.7; color: #55554f; margin: 0; }
+.wi-body { display: grid; gap: 18px; margin-top: 20px; align-items: center; }
+.wi-figbox { margin: 0; position: relative; }
+.wi-fig { display: block; width: 100%; height: auto; border-radius: 18px; box-shadow: 0 0 0 6px #fff, 0 0 0 7px rgba(176,138,62,.4), 0 14px 30px rgba(52,72,6,.12); }
+.wi-figbox figcaption { position: absolute; right: 10px; top: 10px; font-size: 11px; color: #7a7a6a; background: rgba(255,255,255,.8); padding: 2px 8px; border-radius: 99px; }
+.wi-t { font-family: var(--serif); font-size: 13px; font-weight: 700; fill: #23401A; }
+.wi-t--s { font-size: 11px; font-weight: 400; fill: #55554f; }
+.wi-t--w { fill: #fff; font-size: 12px; font-weight: 400; }
+.wi-t--wb { fill: #fff; font-size: 14px; }
+.wi-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.wi-steps li { display: flex; gap: 14px; align-items: flex-start; padding: 12px 14px; border-radius: 14px; background: rgba(255,255,255,.75); box-shadow: 0 0 0 1px rgba(62,106,44,.12); }
+.wi-no { flex: none; display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; color: #fff; font-family: var(--serif); font-weight: 700;
+  background: radial-gradient(circle at 30% 25%, #6F9A45, #3E6A2C 70%); box-shadow: 0 0 0 3px #fff, 0 0 0 4px rgba(62,106,44,.3), 0 6px 12px rgba(62,106,44,.25); }
+.wi-steps li > div > b { display: block; font-family: var(--serif); font-size: 17px; color: #23401A; }
+.wi-steps p { margin: 2px 0 0; font-size: 14px; line-height: 1.6; color: #55554f; }
+.wi-src { margin: 16px 0 0; font-size: 12px; line-height: 1.6; color: #8a8a7a; }
+@media (min-width: 768px) {
+  .whatis { padding: 34px 36px 26px; }
+  .wi-head h2 { font-size: 26px; }
+  .wi-body { grid-template-columns: 1fr 1.05fr; gap: 32px; }
+}
+.wi-steps p b { color: #3E6A2C; }
+@media (max-width: 767px) { .wi-steps li { padding: 10px 12px; gap: 12px; } .wi-steps p { font-size: 13.5px; } .wi-steps li > div > b { font-size: 16px; } }
