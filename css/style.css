@@ -1938,3 +1938,7 @@ body { background: #FFFFFF; }
 }
 @media (max-width: 767px) { .site-footer .member-note, .site-footer .f-copy, .site-footer .f-sub, .site-footer .f-temple small { color: #4a473e; } .site-footer .member-note { font-size: 14px; } }
 /* END mobile-text */
+
+/* 맨 위 띠: 사찰 나무색(고목 갈색) */
+.topbar { background: linear-gradient(180deg, #6B4528 0%, #58381F 100%); color: rgba(255,244,222,.88); border-bottom: 1px solid rgba(226,200,130,.4); }
+.topbar b, .topbar a { color: #F2E3A6; }
