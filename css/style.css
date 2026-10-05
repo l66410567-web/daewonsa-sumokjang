@@ -1951,3 +1951,28 @@ body { background: #FFFFFF; }
 @media (min-width: 1024px) { .brand img.brand-logo { height: 64px; width: auto; } }
 .f-brand--temple img.f-mark { width: 104px; height: auto; background: none; padding: 0; }
 .closing-mark { width: 150px; height: auto; }
+
+/* =========================================================
+   헤더 로고 글씨 키움 · 둘러보기 사진은 잘림 없이(땅까지) 보이게
+   ========================================================= */
+.brand img.brand-logo { height: 62px; }
+@media (min-width: 1024px) { .brand img.brand-logo { height: 68px; } }
+.site-header { min-height: 64px; }
+
+.shots { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; margin-top: 18px; }
+.shots figure { margin: 0; }
+.shots a { display: block; }
+.shots img { display: block; width: 100%; height: auto; border-radius: 14px; box-shadow: 0 0 0 1px rgba(176,138,62,.3), 0 10px 24px rgba(52,72,6,.10); }
+.shots figcaption { margin-top: 8px; font-size: 14px; line-height: 1.5; color: #3a3a35; text-align: center; }
+@media (min-width: 768px) { .shots { grid-template-columns: repeat(3, 1fr); gap: 18px; } .shots figcaption { font-size: 15px; } }
+@media (min-width: 1100px) { .shots { grid-template-columns: repeat(4, 1fr); } }
+
+.look2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; margin: 4px 0 18px; }
+.look2 figure { margin: 0; }
+.look2 img { display: block; width: 100%; height: auto; border-radius: 14px; box-shadow: 0 0 0 1px rgba(176,138,62,.3), 0 10px 24px rgba(52,72,6,.10); }
+.look2 figcaption { margin-top: 8px; font-size: 14px; line-height: 1.5; color: #3a3a35; text-align: center; }
+@media (min-width: 768px) { .look2 { gap: 22px; max-width: 760px; } .look2 figcaption { font-size: 15px; } }
+
+/* 경내 사진도 자르지 않고 건물 전체가 보이게 */
+.card-photo--land img { aspect-ratio: auto; height: auto; object-fit: contain; }
+.card-grid--land { align-items: start; }
