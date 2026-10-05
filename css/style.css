@@ -1723,3 +1723,31 @@ body { background: #FFFFFF; }
   background: rgba(255,255,255,.75); box-shadow: 0 0 0 1px color-mix(in srgb, var(--c, #9E3D2A) 22%, transparent); }
 .path-card .pc-benefit span { font-size: 12.5px; letter-spacing: .02em; color: #8a6a5a; }
 .path-card .pc-benefit b { font-size: 15px; color: var(--deep, #6E2414); letter-spacing: -.01em; }
+
+/* =========================================================
+   2.0 1단계: 사진 위 문구 숨김 · 5초 요약 띠 · 히어로 버튼 우선순위
+   ========================================================= */
+.mhero figcaption, .render-tag, .intro-photo figcaption { display: none !important; }
+.fig--tall img { aspect-ratio: 3 / 4; max-height: 520px; object-position: top; }
+.fig--lead { margin: 0 0 24px; }
+
+.q5 { background: linear-gradient(180deg, #FBF8EE, #F4EFE0); border-bottom: 1px solid rgba(176,138,62,.22); }
+.q5 ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; }
+.q5 li { display: grid; justify-items: center; text-align: center; gap: 4px; padding: 20px 8px; border-top: 1px solid rgba(176,138,62,.2); }
+.q5 li:nth-child(-n+2) { border-top: 0; }
+.q5 li:nth-child(even) { border-left: 1px solid rgba(176,138,62,.2); }
+.q5-ic { display: flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 50%; margin-bottom: 6px;
+  background: radial-gradient(circle at 30% 25%, #7FA24B, #3E6A2C 70%); box-shadow: 0 0 0 3px #fff, 0 0 0 4px rgba(62,106,44,.28), 0 6px 14px rgba(62,106,44,.22); }
+.q5-ic svg { width: 24px; height: 24px; fill: none; stroke: #fff; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.q5 b { font-family: var(--serif); font-size: 17px; color: #23401A; }
+.q5 li > span:last-child { font-size: 13.5px; line-height: 1.5; color: #55554f; }
+@media (min-width: 900px) {
+  .q5 ul { grid-template-columns: repeat(4, 1fr); }
+  .q5 li, .q5 li:nth-child(-n+2) { grid-template-columns: auto; padding: 28px 12px; border-top: 0; border-left: 1px solid rgba(176,138,62,.2); }
+  .q5 li:first-child { border-left: 0; }
+  .q5 b { font-size: 19px; }
+  .q5 li > span:last-child { font-size: 15px; }
+}
+.q5 + .wrap { padding-top: 32px; }
+.q5 + .wrap .visit-note--top { margin-top: 0; }
+@media (min-width: 900px) { .q5 + .wrap { padding-top: 48px; } }
