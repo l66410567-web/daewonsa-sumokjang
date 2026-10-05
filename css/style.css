@@ -1853,3 +1853,88 @@ body { background: #FFFFFF; }
   .intro-photo { margin: 0 -16px; }
   .intro-photo img { border-radius: 0; aspect-ratio: 4 / 5; box-shadow: none; }
 }
+
+
+/* =========================================================
+   모바일: 글씨 진하게 · 본문 굵기 500 · 작은 글씨 키움
+   ========================================================= */
+@media (max-width: 767px) {
+  body { color: #1d1f1d; font-weight: 500; -webkit-font-smoothing: antialiased; }
+  :root { --text: #1d1f1d; }
+  b, strong, h1, h2, h3, h4, th { font-weight: 700; }
+  .car-btns button { color: #3a3a35; }
+  .compare-tbl thead th { color: #3a3a35; }
+  .duo-note { color: #3a3a35; }
+  .f-col p { color: #3a382f; }
+  .f-sub { color: #4a473e; }
+  .f-temple small { color: #3a382f; }
+  .guide-head p { color: #3a3a35; }
+  .info-card .mw-why { color: #3a3a35; }
+  .lead { color: #3a3a35; }
+  .lf-a { color: #2b2b26; }
+  .lf-q { color: #6a4f26; }
+  .m2-desc { color: #33332e; }
+  .member-why li span { color: #3a3a35; }
+  .merit span { color: #3a3a35; }
+  .merit-sec--light .merit span { color: #3a3a35; }
+  .mw-foot { color: #3a3a35; }
+  .note { color: #3a3a35; }
+  .numline span { color: #3a3a35; }
+  .path-card .pc-benefit span { color: #6a4a3a; }
+  .path-card .pc-tel { color: #33332e; }
+  .path-card p { color: #33332e; }
+  .path-card--urgent p { color: #33332e; }
+  .ph-aside { color: #46463f; }
+  .ph-aside-calc { color: #4d3f26; }
+  .ph-desc { color: #33332e; }
+  .ph-fee { color: #46463f; }
+  .ph-notes span { color: #2b2b26; }
+  .pol-lead { color: #2b2b26; }
+  .pol-sec li { color: #2b2b26; }
+  .pol-sec p { color: #2b2b26; }
+  .price-tbl tbody th small { color: #3a3a35; }
+  .price-tbl--real tr.tr-more td[colspan] { color: #4d3f26; }
+  .q5 li > span:last-child { color: #33332e; }
+  .quick span { color: #3a3a35; }
+  .src-note { color: #3a3a35; }
+  .stat span { color: #3a3a35; }
+  .steps span { color: #3a3a35; }
+  .tbl-notes { color: #3a3a35; }
+  .tbl-title small { color: #3a3a35; }
+  .tr-desc { color: #2b2b26; }
+  .tree-sp { color: #3a3a35; }
+  .ug-day ul li { color: #33332e; }
+  .ug-day ul li small { color: #5f5238; }
+  .ug-doc p { color: #33332e; }
+  .ug-flow p { color: #33332e; }
+  .ug-help-txt p { color: #4d3f26; }
+  .ug-note { color: #605f55; }
+  .ug-now-item p { color: #33332e; }
+  .ug-tips p { color: #33332e; }
+  .ug-tips small { color: #605f55; }
+  .value-note { color: #3a3a35; }
+  .value-strip span { color: #3a3a35; }
+  .visit-mini { color: #3a3a35; }
+  .visit-must span { color: #3a3a35; }
+  .visit-note span { color: #4d3f26; }
+  .wi-head p { color: #33332e; }
+  .wi-src { color: #605f55; }
+  .wi-steps p { color: #33332e; }
+  .duo-faq li span { font-size: 15px; }
+  .lf-q { font-size: 15px; }
+  .merit span { font-size: 15px; }
+  .pcard-body span { font-size: 15px; }
+  .ph-fee { font-size: 15px; }
+  .q5 li > span:last-child { font-size: 15px; }
+  .src-note { font-size: 15px; }
+  .ug-day ul li { font-size: 15px; }
+  .ug-doc p { font-size: 15px; }
+  .ug-flow p { font-size: 15px; }
+  .ug-note { font-size: 15px; }
+  .ug-perks li:not(.ug-perks-h) { font-size: 15px; }
+  .ug-tips p { font-size: 15px; }
+  .value-strip span { font-size: 15px; }
+  .wi-steps p { font-size: 15px; }
+}
+@media (max-width: 767px) { .site-footer .member-note, .site-footer .f-copy, .site-footer .f-sub, .site-footer .f-temple small { color: #4a473e; } .site-footer .member-note { font-size: 14px; } }
+/* END mobile-text */
