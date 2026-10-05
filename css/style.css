@@ -2016,3 +2016,21 @@ body { background: #FFFFFF; }
   .header-call { padding: 0 14px 0 6px; font-size: 15px; gap: 8px; }
   .brand img.brand-logo { height: 60px; }
 }
+
+/* =========================================================
+   슬라이드 전환을 자연스럽게: 이전 장면 위로 새 장면이 서서히 덮임
+   (겹쳐 사라지며 어두워지던 현상 · 확대 효과가 갑자기 되돌아가던 현상 · 글씨 겹침 해소)
+   ========================================================= */
+.mhero .slide { opacity: 0; z-index: 0; transition: opacity 1.6s cubic-bezier(.4,0,.2,1); will-change: opacity; }
+.mhero .slide.is-active { opacity: 1; z-index: 2; }
+.mhero .slide.is-prev { opacity: 1; z-index: 1; transition: none; }
+.mhero .slide img { will-change: transform; backface-visibility: hidden; }
+/* 이전 장면도 확대 동작을 이어서 유지(멈추거나 되돌아가지 않음) */
+.mhero .slide.is-prev img:not(.is-soft) { animation: kenburns 14s linear forwards; }
+/* 글씨: 나가는 장면은 빠르게 사라지고, 들어오는 장면은 사진이 자리잡은 뒤 차례로 */
+.mhero .slide .mhero-copy { transition: opacity .5s ease; }
+.mhero .slide.is-prev .mhero-copy { opacity: 0; }
+.mhero .slide.is-active .mhero-copy > * { animation: rise 1.2s cubic-bezier(.2,.7,.2,1) both; animation-delay: .7s; }
+.mhero .slide.is-active .mhero-copy > *:nth-child(2) { animation-delay: .95s; }
+.mhero .slide.is-active .mhero-copy > *:nth-child(3) { animation-delay: 1.2s; }
+@media (prefers-reduced-motion: reduce) { .mhero .slide, .mhero .slide.is-prev { transition: none; } .mhero .slide.is-active .mhero-copy > * { animation: none; } }

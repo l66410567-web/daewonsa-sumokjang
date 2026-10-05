@@ -66,8 +66,16 @@
       dotBtns.push(b);
     });
     function go(n) {
+      var old = cur;
       cur = (n + slides.length) % slides.length;
-      slides.forEach(function (s, i) { s.classList.toggle('is-active', i === cur); });
+      slides.forEach(function (s, i) { s.classList.toggle('is-active', i === cur); if (i === cur) s.classList.remove('is-prev'); });
+      /* 이전 장면은 새 장면이 완전히 덮을 때까지 그대로 남겨 두어 겹쳐 사라지는 어색함을 없앰 */
+      if (old !== cur && slides[old]) {
+        var prev = slides[old];
+        prev.classList.add('is-prev');
+        clearTimeout(prev._pt);
+        prev._pt = setTimeout(function () { prev.classList.remove('is-prev'); }, 1900);
+      }
       dotBtns.forEach(function (b, i) { b.setAttribute('aria-current', i === cur ? 'true' : 'false'); });
       var cnt = box.querySelector('.slider-count');
       if (cnt) cnt.textContent = ('0' + (cur + 1)).slice(-2) + ' / ' + ('0' + slides.length).slice(-2);
