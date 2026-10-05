@@ -1835,3 +1835,21 @@ body { background: #FFFFFF; }
 .pol-sec li { margin: 0 0 8px; font-size: 16px; line-height: 1.75; color: #4A4A42; }
 .pol-box { margin: 0 0 12px; padding: 14px 18px; border-radius: 12px; background: #F3F6EA; box-shadow: 0 0 0 1px rgba(62,106,44,.18); }
 .pol-box p { margin: 0 0 4px; }
+
+/* =========================================================
+   모바일: 첫 화면 사진이 더 보이도록 · 소개 사진 위로/크게
+   ========================================================= */
+@media (max-width: 767px) {
+  .mhero .slide::after { background: linear-gradient(180deg, rgba(20,28,2,.16) 0%, rgba(20,28,2,.06) 26%, rgba(20,28,2,.42) 48%, rgba(20,28,2,.86) 100%); }
+  .mhero-cta .btn--glass { display: none; }            /* 전화는 하단 고정 바에 항상 있음 */
+  .mhero-cta { bottom: 108px; }
+  .mhero-copy { bottom: 232px; }
+  .mhero h1, .mhero .mhero-title { font-size: 38px; text-shadow: 0 2px 16px rgba(0,0,0,.35); }
+  .mhero-copy p:not(.mhero-title) { text-shadow: 0 1px 10px rgba(0,0,0,.4); }
+  .mhero-kicker { text-shadow: 0 1px 8px rgba(0,0,0,.6); }
+  .merit-sec { padding-bottom: 32px; }
+  .intro-sec { padding-top: 0; }
+  .intro-sec .intro { gap: 22px; }
+  .intro-photo { margin: 0 -16px; }
+  .intro-photo img { border-radius: 0; aspect-ratio: 4 / 5; box-shadow: none; }
+}
