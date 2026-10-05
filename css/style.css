@@ -2004,3 +2004,15 @@ body { background: #FFFFFF; }
 .mhero .slider-arrow:hover { color: #fff; background: transparent; }
 .mhero .slider-arrow.prev:hover { transform: translateX(-3px); } .mhero .slider-arrow.next:hover { transform: translateX(3px); }
 @media (prefers-reduced-motion: reduce) { .mhero .slider-dots button[aria-current="true"]::after { animation: none; transform: translateY(-50%) scaleX(1); } }
+
+/* 헤더: 영문 줄이 들어간 로고에 맞춰 높이 조정 · 좁은 PC 화면에서 메뉴 줄바꿈 방지 */
+:root { --header-h: 72px; }
+@media (min-width: 1024px) { :root { --header-h: 84px; } }
+.brand img.brand-logo { height: 64px; }
+@media (min-width: 1024px) { .brand img.brand-logo { height: 76px; } }
+.gnb a, .header-call { white-space: nowrap; }
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .gnb { gap: 16px; } .gnb a { font-size: 15px; letter-spacing: 0; }
+  .header-call { padding: 0 14px 0 6px; font-size: 15px; gap: 8px; }
+  .brand img.brand-logo { height: 60px; }
+}
