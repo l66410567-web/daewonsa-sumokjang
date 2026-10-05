@@ -1802,3 +1802,10 @@ body { background: #FFFFFF; }
   .lf-q { font-size: 15px; }
   .lf-a { font-size: 16px; }
 }
+
+/* 2.0 3단계: 계약 시 혜택 */
+.ug-perks { list-style: none; margin: 22px 0 0; padding: 14px 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; border-radius: 16px;
+  background: linear-gradient(120deg, #FFFDF6, #F8F0DC); box-shadow: 0 0 0 1px rgba(176,138,62,.35); }
+.ug-perks .ug-perks-h { font-family: var(--serif); font-weight: 700; color: #5A3E0E; margin-right: 4px; }
+.ug-perks li:not(.ug-perks-h) { padding: 5px 12px; border-radius: 99px; font-size: 14px; font-weight: 600; color: #3E6A2C; background: #fff; box-shadow: 0 0 0 1px rgba(62,106,44,.25); }
+.ug-perks li:not(.ug-perks-h)::before { content: "✓"; margin-right: 6px; color: #3E6A2C; }
