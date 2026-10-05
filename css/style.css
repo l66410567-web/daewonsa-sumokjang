@@ -1843,7 +1843,7 @@ body { background: #FFFFFF; }
   .mhero .slide::after { background: linear-gradient(180deg, rgba(20,28,2,.16) 0%, rgba(20,28,2,.06) 26%, rgba(20,28,2,.42) 48%, rgba(20,28,2,.86) 100%); }
   .mhero-cta .btn--glass { display: none; }            /* 전화는 하단 고정 바에 항상 있음 */
   .mhero-cta { bottom: 108px; }
-  .mhero-copy { bottom: 232px; }
+  .mhero-copy { bottom: 264px; }
   .mhero h1, .mhero .mhero-title { font-size: 38px; text-shadow: 0 2px 16px rgba(0,0,0,.35); }
   .mhero-copy p:not(.mhero-title) { text-shadow: 0 1px 10px rgba(0,0,0,.4); }
   .mhero-kicker { text-shadow: 0 1px 8px rgba(0,0,0,.6); }
