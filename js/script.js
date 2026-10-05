@@ -88,8 +88,11 @@
       if (Math.abs(dx) > 40) { go(cur + (dx < 0 ? 1 : -1)); restart(); }
       x0 = null;
     });
-    box.addEventListener('mouseenter', function () { clearInterval(timer); });
-    box.addEventListener('mouseleave', restart);
+    box.style.setProperty('--ms', ms + 'ms');
+    if (!box.closest('.mhero')) {
+      box.addEventListener('mouseenter', function () { clearInterval(timer); });
+      box.addEventListener('mouseleave', restart);
+    }
     go(0); restart();
   });
 
