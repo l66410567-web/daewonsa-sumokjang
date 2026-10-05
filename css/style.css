@@ -1809,3 +1809,8 @@ body { background: #FFFFFF; }
 .ug-perks .ug-perks-h { font-family: var(--serif); font-weight: 700; color: #5A3E0E; margin-right: 4px; }
 .ug-perks li:not(.ug-perks-h) { padding: 5px 12px; border-radius: 99px; font-size: 14px; font-weight: 600; color: #3E6A2C; background: #fff; box-shadow: 0 0 0 1px rgba(62,106,44,.25); }
 .ug-perks li:not(.ug-perks-h)::before { content: "✓"; margin-right: 6px; color: #3E6A2C; }
+
+/* 2.0 3단계: 하위 페이지 마무리 CTA · 가격 설명 */
+.sub-cta { background: linear-gradient(180deg, #FBF8EE, #F4EFE0); border-top: 1px solid rgba(176,138,62,.22); }
+.sub-cta .lead { max-width: 640px; margin-left: auto; margin-right: auto; }
+.ph-notes--guide { margin-top: 26px; }
