@@ -1942,3 +1942,12 @@ body { background: #FFFFFF; }
 /* 맨 위 띠: 사찰 나무색(고목 갈색) */
 .topbar { background: linear-gradient(180deg, #6B4528 0%, #58381F 100%); color: rgba(255,244,222,.88); border-bottom: 1px solid rgba(226,200,130,.4); }
 .topbar b, .topbar a { color: #F2E3A6; }
+
+/* =========================================================
+   새 로고 반영: 헤더 가로형 · 푸터/마무리 마크
+   ========================================================= */
+.brand { gap: 0; }
+.brand img.brand-logo { display: block; width: auto; height: 54px; background: none; padding: 0; border-radius: 0; box-sizing: border-box; }
+@media (min-width: 1024px) { .brand img.brand-logo { height: 64px; width: auto; } }
+.f-brand--temple img.f-mark { width: 104px; height: auto; background: none; padding: 0; }
+.closing-mark { width: 150px; height: auto; }
