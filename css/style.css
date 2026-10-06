@@ -2051,3 +2051,76 @@ body { background: #FFFFFF; }
 /* 형광 밑줄: 글씨 폭만큼, 글씨 아래쪽에만 (박스 전체 폭으로 퍼지던 문제 수정) */
 .hl-mark, .visit-note b .hl-mark, .visit-note span.hl-mark { display: inline !important; margin: 0 !important; padding: 0 2px; font: inherit; color: inherit; line-height: inherit;
   background: linear-gradient(transparent 58%, rgba(242,233,138,.75) 58%, rgba(242,233,138,.75) 92%, transparent 92%); box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+
+/* =========================================================
+   모바일 압축: 수목장 핵심만 남기고, 대원사 이야기는 '더 알아보기'로
+   ========================================================= */
+.more-mo { display: none; }
+.more-card { position: relative; display: block; margin-top: 12px; padding: 18px 56px 18px 20px; border-radius: 16px; text-decoration: none; background: linear-gradient(160deg, #fff, #F3F6EA); box-shadow: 0 0 0 1px rgba(62,106,44,.2), 0 8px 20px rgba(62,106,44,.08); }
+.more-card b { display: block; font-family: var(--serif); font-size: 18px; color: #23401A; }
+.more-card span { display: block; margin-top: 4px; font-size: 14.5px; line-height: 1.5; color: #4A4A42; }
+.more-card i { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; font-style: normal; color: #fff; background: radial-gradient(circle at 30% 25%, #6F9A45, #3E6A2C 70%); }
+
+@media (max-width: 767px) {
+  .more-mo { display: block; }
+  .mo-skip { display: none !important; }
+  .section { padding: 44px 0; }
+
+  /* 두 갈래 카드: 요약만 */
+  .q5 li { padding: 14px 8px; }
+  .q5-ic { width: 40px; height: 40px; margin-bottom: 4px; }
+  .path-card { padding: 22px 20px; }
+  .path-card .pc-no, .path-card > p:not(.pc-benefit):not(.pc-tel) { display: none; }
+  .path-card .pc-ic { width: 52px; height: 52px; margin-bottom: 12px; }
+  .path-card h2 { font-size: 21px; margin-bottom: 12px; }
+  .path-card .go { margin-top: 6px; padding-top: 14px; }
+
+  /* 선택 이유: 4개만, 작게 */
+  .m2--blossom, .m2--teal { display: none; }
+  .merit2 { margin-top: 24px; gap: 12px; }
+  .m2 { padding: 20px 18px 18px; }
+  .m2-num { display: none; }
+  .m2-ic { width: 48px; height: 48px; margin-bottom: 10px; }
+  .m2-ic svg { width: 26px; height: 26px; }
+  .m2 b { font-size: 19px; }
+  .m2 b::after { margin: 8px 0 6px; }
+
+  /* 수목장 소개: 사진 + 핵심 문장만 */
+  .intro-facts { display: none; }
+  .intro-text p:nth-of-type(1) { display: none; }
+
+  /* 이용료: 카드만 간결하게 */
+  .ph-desc, .ph-notes { display: none; }
+  .ph-list { margin-top: 22px; gap: 12px; }
+  .ph { padding: 20px 20px 18px; }
+  .ph-ic { width: 46px; height: 46px; margin-bottom: 10px; }
+  .ph-ic svg { width: 26px; height: 26px; }
+  .ph-kind { font-size: 20px; }
+  .ph-price { margin-top: 10px; padding-top: 10px; font-size: 23px; }
+  .ph-aside { margin-top: 20px; padding: 16px 18px 18px; }
+  .ph-cta { margin-top: 18px; }
+
+  /* 평생 영구 안치: 질문 3개만 */
+  .lf-list li:nth-child(n+4) { display: none; }
+  .lf-sec .ph-cta .btn--line { display: none; }
+  .lf-sec .lf-list { margin-top: 22px; }
+
+  /* 사진: 옆으로 넘겨 보기 */
+  .gallery-strip { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; margin: 20px -16px 18px; padding: 0 16px; -webkit-overflow-scrolling: touch; }
+  .gallery-strip a { flex: 0 0 58%; aspect-ratio: 3 / 4; scroll-snap-align: start; }
+
+  /* 신뢰 띠: 3개 · 거리 지도는 작게 · 상담 안내는 하단 바와 마무리 띠로 대체 */
+  .tr-list li:nth-child(3), .tr-list li:nth-child(4) { display: none; }
+  .near-map { max-width: 210px; }
+  .near { gap: 18px; }
+  .duo-call { display: none; }
+  .duo { gap: 0; }
+}
+@media (max-width: 767px) {
+  .ph { display: grid; grid-template-columns: 46px 1fr; column-gap: 14px; align-items: center; padding: 16px 18px; }
+  .ph-ic { grid-row: 1 / span 3; margin: 0; align-self: start; margin-top: 4px; }
+  .ph-kind, .ph-price, .ph-fee { grid-column: 2; }
+  .ph-price { margin-top: 4px; padding-top: 0; border-top: 0; font-size: 21px; }
+  .ph-fee { margin-top: 4px; font-size: 14px; }
+  .ph::after { left: 18px; }
+}
