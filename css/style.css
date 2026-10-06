@@ -2047,3 +2047,7 @@ body { background: #FFFFFF; }
 @keyframes q5blink { 0%, 100% { opacity: 1; filter: brightness(1); } 45% { opacity: .55; filter: brightness(1.35); } 60% { opacity: 1; filter: brightness(1.15); } }
 @keyframes q5ring { 0% { transform: scale(.92); opacity: .0; } 20% { opacity: .9; } 100% { transform: scale(1.5); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .q5-ic, .q5-ic::after { animation: none; } }
+
+/* 형광 밑줄: 글씨 폭만큼, 글씨 아래쪽에만 (박스 전체 폭으로 퍼지던 문제 수정) */
+.hl-mark, .visit-note b .hl-mark, .visit-note span.hl-mark { display: inline !important; margin: 0 !important; padding: 0 2px; font: inherit; color: inherit; line-height: inherit;
+  background: linear-gradient(transparent 58%, rgba(242,233,138,.75) 58%, rgba(242,233,138,.75) 92%, transparent 92%); box-decoration-break: clone; -webkit-box-decoration-break: clone; }
