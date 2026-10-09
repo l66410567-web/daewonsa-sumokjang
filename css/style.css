@@ -2321,3 +2321,9 @@ body { color: #131513; }
 .wi-head p { color: #262621; }
 .wi-src { color: #46463f; }
 .wi-steps p { color: #262621; }
+
+/* 모바일 점검 보완 */
+.sec-title { text-wrap: balance; }
+@media (min-width: 768px) { .more-grid { grid-template-columns: repeat(2, 1fr); max-width: 860px; margin-left: auto; margin-right: auto; } }
+.f-links a, .duo-head a { display: inline-flex; align-items: center; min-height: 44px; }
+.wi-src { font-size: 13px; }
