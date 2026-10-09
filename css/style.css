@@ -2110,7 +2110,6 @@ body { background: #FFFFFF; }
   .gallery-strip a { flex: 0 0 58%; aspect-ratio: 3 / 4; scroll-snap-align: start; }
 
   /* 신뢰 띠: 3개 · 거리 지도는 작게 · 상담 안내는 하단 바와 마무리 띠로 대체 */
-  .tr-list li:nth-child(3), .tr-list li:nth-child(4) { display: none; }
   .near-map { max-width: 210px; }
   .near { gap: 18px; }
   .duo-call { display: none; }
@@ -2124,3 +2123,15 @@ body { background: #FFFFFF; }
   .ph-fee { margin-top: 4px; font-size: 14px; }
   .ph::after { left: 18px; }
 }
+
+/* =========================================================
+   메인 압축(모든 화면): 수목장 중심 · 대원사 신뢰는 짧게 · 나머지는 둘러보기/이야기 페이지로
+   ========================================================= */
+.more-mo { display: block; background: linear-gradient(180deg, #FBF8EE, #F4EFE0); }
+.more-grid { display: grid; gap: 12px; margin-top: 12px; }
+@media (min-width: 768px) { .more-grid { grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 26px; } .more-grid .more-card { margin-top: 0; } }
+.ph-notes { display: none; }
+.lf-list li:nth-child(n+4) { display: none; }
+.lf-sec .ph-cta .btn--line { display: none; }
+.intro-facts { display: none; }
+@media (min-width: 900px) { .tr-list { grid-template-columns: repeat(3, 1fr); } }
