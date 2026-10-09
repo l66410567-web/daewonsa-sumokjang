@@ -2327,3 +2327,29 @@ body { color: #131513; }
 @media (min-width: 768px) { .more-grid { grid-template-columns: repeat(2, 1fr); max-width: 860px; margin-left: auto; margin-right: auto; } }
 .f-links a, .duo-head a { display: inline-flex; align-items: center; min-height: 44px; }
 .wi-src { font-size: 13px; }
+
+/* =========================================================
+   메인 슬라이드 글씨: 절제된 명조 · 금빛 가는 선 · 넓은 자간 (호텔·금융 브랜드 방식)
+   ========================================================= */
+.mhero-kicker { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 18px; font-size: 13px; font-weight: 500; letter-spacing: .34em; color: #E6D49A; text-shadow: 0 1px 10px rgba(0,0,0,.5); }
+.mhero-kicker::before, .mhero-kicker::after { content: ""; width: 26px; height: 1px; background: rgba(230,212,154,.75); }
+.mhero h1, .mhero .mhero-title { font-weight: 400 !important; letter-spacing: -.01em; line-height: 1.38; color: #fff; text-wrap: balance;
+  text-shadow: 0 2px 28px rgba(0,0,0,.42), 0 1px 3px rgba(0,0,0,.25); margin-bottom: 0; }
+.mhero-copy p:not(.mhero-title) { margin-top: 0; font-weight: 400; letter-spacing: .02em; line-height: 1.85; color: rgba(255,255,255,.92); text-shadow: 0 1px 14px rgba(0,0,0,.5); }
+.mhero-copy p:not(.mhero-title)::before { content: ""; display: block; width: 48px; height: 1px; margin: 20px auto 18px; background: linear-gradient(90deg, transparent, #E2CF8E, transparent); }
+@media (min-width: 768px) {
+  .mhero-kicker { font-size: 14px; margin-bottom: 22px; }
+  .mhero h1, .mhero .mhero-title { font-size: 58px; }
+  .mhero-copy p:not(.mhero-title) { font-size: 19px; }
+  .mhero-copy p:not(.mhero-title)::before { margin: 24px auto 22px; width: 64px; }
+}
+@media (max-width: 767px) {
+  .mhero-kicker { font-size: 12.5px; letter-spacing: .3em; margin-bottom: 14px; }
+  .mhero h1, .mhero .mhero-title { font-size: 34px; }
+  .mhero-copy p:not(.mhero-title) { font-size: 15px; }
+  .mhero-copy p:not(.mhero-title)::before { margin: 14px auto 12px; }
+}
+/* 밝은 사진 위에서도 글씨가 또렷하도록 글씨 뒤에 은은한 어두운 번짐 */
+.mhero-copy { isolation: isolate; }
+.mhero-copy::before { content: ""; position: absolute; z-index: -1; inset: -70px -50px -50px; pointer-events: none; background: radial-gradient(closest-side, rgba(12,20,8,.42), rgba(12,20,8,.16) 65%, transparent); }
+.mhero-kicker { color: #F1E4B4; font-weight: 600; text-shadow: 0 1px 12px rgba(0,0,0,.65); }
