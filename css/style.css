@@ -2353,3 +2353,27 @@ body { color: #131513; }
 .mhero-copy { isolation: isolate; }
 .mhero-copy::before { content: ""; position: absolute; z-index: -1; inset: -70px -50px -50px; pointer-events: none; background: radial-gradient(closest-side, rgba(12,20,8,.42), rgba(12,20,8,.16) 65%, transparent); }
 .mhero-kicker { color: #F1E4B4; font-weight: 600; text-shadow: 0 1px 12px rgba(0,0,0,.65); }
+
+/* 첫 화면 안내 배지: 어두운 바탕 위에서 글씨가 보이도록(전체 글씨 진하게 규칙이 덮어쓰던 문제 수정) */
+.mhero .visit-must b { color: #F1E4B4 !important; }
+.mhero .visit-must span, .mhero .visit-must .vm-sub, .mhero .visit-must em { color: rgba(255,255,255,.92) !important; }
+.mhero .visit-must svg { color: #F1E4B4; }
+
+/* PC 첫 화면: 글씨 덩어리를 아래로 내리고 크기를 줄여 머리글에 붙지 않게 */
+@media (min-width: 768px) {
+  .mhero h1, .mhero .mhero-title { font-size: 50px; line-height: 1.32; }
+  .mhero-copy { bottom: 258px; }
+  .mhero-kicker { font-size: 15px; margin-bottom: 20px; }
+  .mhero-copy p:not(.mhero-title)::before { margin: 20px auto 18px; }
+}
+@media (min-width: 768px) and (max-height: 820px) {
+  .mhero h1, .mhero .mhero-title { font-size: 44px; }
+  .mhero-copy { bottom: 236px; }
+  .mhero-cta { bottom: 100px; }
+  .mhero-kicker { margin-bottom: 14px; }
+  .mhero-copy p:not(.mhero-title) { font-size: 17px; }
+  .mhero-copy p:not(.mhero-title)::before { margin: 14px auto 12px; }
+}
+.mhero-kicker { text-shadow: 0 1px 3px rgba(0,0,0,.7), 0 0 16px rgba(0,0,0,.55); }
+@media (min-width: 768px) { .mhero-copy { bottom: 286px; } }
+@media (min-width: 768px) and (max-height: 820px) { .mhero-copy { bottom: 266px; } }
