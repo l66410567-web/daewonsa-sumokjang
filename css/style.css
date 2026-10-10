@@ -2382,3 +2382,4 @@ body { color: #131513; }
   .mhero-kicker::before, .mhero-kicker::after { width: 22px; }
 }
 .ph-aside-main { text-wrap: balance; }
+.tbl-sub { display: block; margin-top: 3px; font-size: 12.5px; line-height: 1.5; color: #46463f; }
