@@ -2462,3 +2462,29 @@ body { color: #131513; }
   .ph-sec, .moments { padding-top: 56px; }
   .moments, .ph-sec, .lf-sec, .gal-sec, .vf-sec, .near-sec, .faq-sec { padding-top: 56px; padding-bottom: 56px; }
 }
+
+/* =========================================================
+   수목장 고르는 법 (계약 전 확인 7가지) · 메인 안내 줄 재색
+   ========================================================= */
+.guide-slim { background: linear-gradient(120deg, #F4F8EC, #E8F0DA) !important; border-color: rgba(40,67,54,.4) !important; }
+.guide-slim .urg-ic { background: linear-gradient(145deg, #33563F, #1F3328) !important; }
+.guide-slim .urg-ic svg { fill: none; stroke: #E2CF8E; stroke-width: 1.5; }
+.guide-slim .urg-txt b { color: #1F3A2D !important; } .guide-slim .urg-txt em { color: #3a4a3e !important; } .guide-slim i { color: #284336 !important; }
+
+.cg-sec .lead { max-width: 700px; margin-left: auto; margin-right: auto; }
+.cg-list { list-style: none; margin: 34px auto 0; padding: 0; max-width: 940px; display: grid; gap: 18px; }
+.cg-item { display: flex; gap: 18px; padding: 24px 22px; border-radius: 16px; background: #fff; border: 1px solid rgba(40,67,54,.18);
+  box-shadow: inset 0 0 0 5px #fff, inset 0 0 0 6px rgba(176,138,62,.42), 0 24px 44px -26px rgba(20,36,28,.34); }
+.cg-no { flex: none; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; font-family: var(--serif); font-size: 22px; font-weight: 700; color: #E2CF8E;
+  background: linear-gradient(145deg, #33563F, #1F3328); box-shadow: 0 0 0 3px #fff, 0 0 0 4.5px rgba(176,138,62,.85), 0 12px 22px -8px rgba(20,36,28,.55); }
+.cg-body { flex: 1; min-width: 0; }
+.cg-short { display: block; font-size: 13.5px; font-weight: 700; letter-spacing: .04em; color: #8A5A2B; }
+.cg-body h2 { margin: 6px 0 8px; font-size: 22px; line-height: 1.4; color: #284336; }
+.cg-why { margin: 0 0 12px; font-size: 15.5px; line-height: 1.7; color: #262621; }
+.cg-check { list-style: none; margin: 0 0 14px; padding: 0; display: grid; gap: 6px; }
+.cg-check li { position: relative; padding-left: 26px; font-size: 15px; line-height: 1.6; color: #1f1f1b; }
+.cg-check li::before { content: "✓"; position: absolute; left: 0; top: 1px; display: flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; font-size: 11px; color: #E2CF8E; background: #284336; }
+.cg-ours { display: grid; gap: 4px; padding: 14px 16px; border-radius: 12px; background: linear-gradient(120deg, #FFFDF6, #F8F0DC); box-shadow: 0 0 0 1px rgba(176,138,62,.45), inset 0 0 0 3px #FFFDF6, inset 0 0 0 4px rgba(176,138,62,.25); }
+.cg-ours b { font-family: var(--serif); font-size: 15px; color: #8A5A2B; letter-spacing: .04em; }
+.cg-ours span { font-size: 15.5px; line-height: 1.7; color: #1f1f1b; font-weight: 600; }
+@media (max-width: 767px) { .cg-item { gap: 12px; padding: 18px 14px; } .cg-no { width: 40px; height: 40px; font-size: 18px; } .cg-body h2 { font-size: 19px; } }
