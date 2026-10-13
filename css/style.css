@@ -2432,3 +2432,33 @@ body { color: #131513; }
   .ph-aside { padding: 14px 16px 16px; }
   .lf-list li { padding: 14px 4px; }
 }
+
+/* =========================================================
+   PC도 모바일과 같은 구성으로 압축 (고객이 궁금해하는 순서, 나머지는 상단 메뉴로)
+   ========================================================= */
+@media (min-width: 768px) {
+  main#main { display: flex; flex-direction: column; }
+  main#main > .mhero { order: 1; } main#main > .q5 { order: 2; } main#main > .urg-slim { order: 3; }
+  main#main > .ph-sec { order: 4; } main#main > .lf-sec { order: 5; } main#main > .gal-sec { order: 6; }
+  main#main > .trust2 { order: 7; } main#main > .moments { order: 8; } main#main > .vf-sec { order: 9; }
+  main#main > .near-sec { order: 10; } main#main > .faq-sec { order: 11; } main#main > .closing { order: 12; }
+  .merit-sec, .intro-sec, .more-mo { display: none !important; }
+
+  .urg-slim { display: flex; align-items: center; gap: 16px; width: min(1100px, calc(100% - 48px)); box-sizing: border-box; margin: 28px auto 0; padding: 16px 22px; border-radius: 14px; text-decoration: none;
+    background: linear-gradient(120deg, #FBEEE8, #F7E3DA); border: 1px solid rgba(158,61,42,.4);
+    box-shadow: inset 0 0 0 4px #fff, inset 0 0 0 5px rgba(158,61,42,.3), 0 18px 36px -22px rgba(110,36,20,.5); transition: transform .3s ease; }
+  .urg-slim:hover { transform: translateY(-2px); }
+  .urg-ic { flex: none; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(145deg, #9A3B2C, #6E2418); box-shadow: 0 0 0 3px #fff, 0 0 0 4.5px rgba(176,138,62,.85); }
+  .urg-ic svg { width: 26px; height: 26px; fill: rgba(255,255,255,.2); stroke: #F6E3C8; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .urg-txt { flex: 1; }
+  .urg-txt b { display: inline; font-family: var(--serif); font-size: 20px; color: #6E2418; margin-right: 14px; }
+  .urg-txt em { font-style: normal; font-size: 16px; color: #5a3a30; }
+  .urg-slim i { font-style: normal; font-size: 24px; color: #9A3B2C; }
+  .urg-slim.only-mo { display: flex; }
+
+  .ph-sec .lead, .moments .lead, .vf-sec .lead, .moments .visit-note, .mm-list li:last-child, .vf-chips,
+  .near-sec .src-note, .near-sec .visit-must, .near-sec .visit-mini { display: none; }
+  .mm-list { grid-template-columns: repeat(3, 1fr); }
+  .ph-sec, .moments { padding-top: 56px; }
+  .moments, .ph-sec, .lf-sec, .gal-sec, .vf-sec, .near-sec, .faq-sec { padding-top: 56px; padding-bottom: 56px; }
+}
