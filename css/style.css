@@ -2518,3 +2518,6 @@ body { color: #131513; }
 .sec-title::after, .sec-title + .lead::before { background: #B08A3E; }
 /* 추모목 숲 사진: 모든 사진을 같은 3:4 규격으로(땅이 보이도록 아래쪽 기준) */
 .shots img { aspect-ratio: 3 / 4; height: auto; object-fit: cover; object-position: 50% 78%; }
+/* 함께 둘러볼 곳: 두 사진을 같은 3:4 규격으로, PC에서는 가로 절반씩 */
+.look2 img { aspect-ratio: 3 / 4; height: auto; object-fit: cover; object-position: 55% 100%; }
+@media (min-width: 768px) { .look2 { max-width: none; width: 100%; grid-template-columns: 1fr 1fr; gap: 22px; } }
