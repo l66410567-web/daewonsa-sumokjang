@@ -2533,3 +2533,5 @@ body { color: #131513; }
 .shots figure { flex: 0 0 calc(50% - 6px); min-width: 0; }
 @media (min-width: 768px) { .shots { gap: 18px; } .shots figure { flex-basis: calc(33.333% - 12px); } }
 @media (min-width: 1100px) { .shots figure { flex-basis: calc(25% - 13.5px); } }
+.shots figcaption em { display: block; margin-bottom: 2px; font-style: normal; font-size: 12px; font-weight: 700; letter-spacing: .08em; color: #8A5A2B; }
+.shot-future img { box-shadow: 0 0 0 1px rgba(176,138,62,.55), 0 10px 24px rgba(52,72,6,.10); }
