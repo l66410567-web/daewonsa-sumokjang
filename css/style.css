@@ -2516,3 +2516,5 @@ body { color: #131513; }
 .tr-list li { border-top-color: rgba(176,138,62,.5); }
 .trust2 .tr-list li { border-color: rgba(226,207,142,.5) !important; }
 .sec-title::after, .sec-title + .lead::before { background: #B08A3E; }
+/* 추모목 숲 사진: 모든 사진을 같은 3:4 규격으로(땅이 보이도록 아래쪽 기준) */
+.shots img { aspect-ratio: 3 / 4; height: auto; object-fit: cover; object-position: 50% 78%; }
