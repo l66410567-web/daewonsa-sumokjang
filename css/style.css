@@ -2570,3 +2570,13 @@ body { color: #131513; }
   .f-biz dl { grid-template-columns: 0.9fr 0.8fr 1.1fr 1.6fr; gap: 0 26px; }
   .f-biz dd { font-size: 18px; }
 }
+
+/* 푸터 사업자 정보: 푸터 배경과 어우러지는 톤 · 총괄 분양 사업자 명시 */
+.f-biz { background: rgba(255,251,238,.38); border: 1px solid rgba(120,95,40,.38); box-shadow: inset 0 0 0 4px rgba(255,251,238,.28), inset 0 0 0 5px rgba(176,138,62,.45); }
+.f-biz-h { color: #3a382f; border-bottom-color: rgba(120,95,40,.4); }
+.f-biz-role { margin: -2px 0 16px; font-size: 15px; line-height: 1.7; color: #3a382f; }
+.f-biz-role b { font-weight: 700; color: #2b2a23; }
+.f-biz dl div { border-left-color: rgba(120,95,40,.55); }
+.f-biz dt { color: #6a4a22; }
+.f-biz dd { color: #2b2a23; font-size: 16px; }
+@media (min-width: 900px) { .f-biz dl { grid-template-columns: 1fr 1fr 1.2fr; gap: 16px 26px; } .f-biz dd { font-size: 17px; } }
