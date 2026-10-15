@@ -2544,3 +2544,11 @@ body { color: #131513; }
   .ph-kind, .ph-price, .ph-fee { grid-column: 2; }
 }
 @media (max-width: 767px) { .ph-photo { height: 100px; min-height: 0; align-self: start; } }
+/* 푸터 사업자 정보 */
+.f-biz { margin: 0 0 18px; padding: 14px 18px; border-radius: 12px; background: rgba(255,255,255,.45); border: 1px solid rgba(120,95,40,.35); }
+.f-biz-h { margin: 0 0 8px; font-family: var(--serif); font-weight: 700; font-size: 14px; letter-spacing: .08em; color: #2f2d28; }
+.f-biz dl { margin: 0; display: grid; gap: 4px 28px; grid-template-columns: 1fr; }
+.f-biz dl div { display: flex; gap: 10px; font-size: 14px; line-height: 1.6; color: #3a382f; }
+.f-biz dt { flex: none; min-width: 96px; font-weight: 700; color: #2f2d28; }
+.f-biz dd { margin: 0; }
+@media (min-width: 768px) { .f-biz dl { grid-template-columns: 1fr 1fr; } }
