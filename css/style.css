@@ -2552,3 +2552,21 @@ body { color: #131513; }
 .f-biz dt { flex: none; min-width: 96px; font-weight: 700; color: #2f2d28; }
 .f-biz dd { margin: 0; }
 @media (min-width: 768px) { .f-biz dl { grid-template-columns: 1fr 1fr; } }
+
+/* 푸터 사업자 정보: 증서형 액자 · 4칸 구성 */
+.f-site { padding-left: 0; margin-top: 4px; }
+.f-biz { position: relative; margin: 6px 0 22px; padding: 22px 22px 20px; border-radius: 14px; background: linear-gradient(160deg, #FFFDF6, #F6EFD9); border: 1.5px solid rgba(40,67,54,.7);
+  box-shadow: inset 0 0 0 5px #FFFDF6, inset 0 0 0 6px rgba(176,138,62,.85), 0 22px 40px -26px rgba(60,45,15,.5); }
+.f-biz-h { display: flex; align-items: center; gap: 12px; margin: 0 0 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(176,138,62,.6); font-family: var(--serif); font-size: 17px; font-weight: 700; letter-spacing: .12em; color: #284336; }
+.f-biz-h::before { content: ""; flex: none; width: 30px; height: 30px; border-radius: 50%;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E2CF8E' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 21V9l7-5 7 5v12'/%3E%3Cpath d='M9 21v-6h6v6M9 11h.01M15 11h.01'/%3E%3C/svg%3E") center/18px no-repeat, linear-gradient(145deg, #33563F, #1F3328);
+  box-shadow: 0 0 0 2px #FFFDF6, 0 0 0 3.5px rgba(176,138,62,.85); }
+.f-biz dl { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 18px; margin: 0; }
+.f-biz dl div { display: block; padding-left: 12px; border-left: 2px solid rgba(176,138,62,.75); }
+.f-biz dt { display: block; min-width: 0; margin-bottom: 3px; font-size: 12.5px; font-weight: 700; letter-spacing: .1em; color: #8A5A2B; }
+.f-biz dd { margin: 0; font-family: var(--serif); font-size: 17px; font-weight: 700; line-height: 1.45; color: #1f1f1b; word-break: keep-all; }
+@media (min-width: 900px) {
+  .f-biz { padding: 26px 32px 24px; }
+  .f-biz dl { grid-template-columns: 0.9fr 0.8fr 1.1fr 1.6fr; gap: 0 26px; }
+  .f-biz dd { font-size: 18px; }
+}
