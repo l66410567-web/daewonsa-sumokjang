@@ -2166,8 +2166,8 @@ body { background: #FFFFFF; }
 .mm-go::after { content: "→"; transition: transform .25s ease; }
 .mm:hover .mm-go::after { transform: translateX(4px); }
 .moments .visit-note { margin: 26px 0 0; }
-@media (min-width: 768px) { .mm-list { grid-template-columns: 1fr 1fr; gap: 18px; } .mm { padding: 28px 26px 24px; } .mm h3 { font-size: 23px; } }
-@media (min-width: 1200px) { .mm-list { grid-template-columns: repeat(4, 1fr); } .mm h3 { font-size: 21px; } }
+@media (min-width: 768px) { .mm-list { grid-template-columns: repeat(3, 1fr); gap: 18px; } .mm { padding: 28px 26px 24px; } .mm h3 { font-size: 23px; } }
+@media (min-width: 1200px) { .mm-list { grid-template-columns: repeat(3, 1fr); } .mm h3 { font-size: 21px; } }
 
 .vf-sec { background: linear-gradient(180deg, #FBF8EE, #F4EFE0); }
 .vf-sec .lead { max-width: 640px; margin-left: auto; margin-right: auto; }
