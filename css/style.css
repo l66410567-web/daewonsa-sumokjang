@@ -2609,3 +2609,10 @@ main#main > .trust2 { order: 7; } main#main > .ph-sec { order: 8; } main#main > 
 .mhero .visit-must .vm-sub .g-when, .closing .g-when { color: #9ED2F5 !important; font-weight: 700; }
 .mhero .visit-must .vm-sub .g-item, .closing .g-item { color: #FFA79B !important; font-weight: 700; }
 .mhero .visit-must .vm-sub .g-give, .closing .g-give { color: #F5D878 !important; font-weight: 700; }
+
+/* 메인 추모목 카드 사진: 나뭇가지 위쪽이 아니라 줄기와 바닥이 함께 보이도록 */
+.ph--blossom .ph-photo, .ph--amber .ph-photo { object-position: 50% 100%; }
+@media (max-width: 767px) {
+  .ph { grid-template-columns: 124px 1fr; column-gap: 14px; }
+  .ph-photo { width: 124px; height: 96px; }
+}
