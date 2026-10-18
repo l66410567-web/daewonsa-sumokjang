@@ -2624,3 +2624,32 @@ main#main > .trust2 { order: 7; } main#main > .ph-sec { order: 8; } main#main > 
 /* 개인목 사진은 원래 구도로 되돌림(부부목·가족목만 하단 기준) */
 .ph--forest .ph-photo { object-position: 50% 70%; }
 .tree-grid .tree-card:first-child .photo { background-position: center; }
+
+/* =========================================================
+   추모목 카드 사진: 작은 세로 사진으로 나무 전체(윗가지~밑동·바닥)가 모두 보이게 (3:4 원본 비율 그대로)
+   ========================================================= */
+.ph-sec .ph { display: grid; grid-template-columns: 116px 1fr; column-gap: 16px; align-items: start; text-align: left; }
+.ph-sec .ph-photo, .ph--forest .ph-photo, .ph--blossom .ph-photo, .ph--amber .ph-photo {
+  grid-row: 1 / span 5; grid-column: 1; width: 116px; height: 155px; min-height: 0; margin: 0; aspect-ratio: 3 / 4;
+  object-fit: cover; object-position: 50% 50%; border: 0; border-radius: 10px; box-shadow: 0 0 0 1.5px rgba(176,138,62,.85); }
+.ph-sec .ph-ic { display: none; }
+.ph-sec .ph-kind, .ph-sec .ph-desc, .ph-sec .ph-price, .ph-sec .ph-fee { grid-column: 2; }
+.ph-sec .ph-desc { display: block; margin: 4px 0 8px; font-size: 14px; line-height: 1.5; }
+.ph-sec .ph-price { margin-top: 0; padding-top: 8px; font-size: 20px; }
+@media (max-width: 767px) {
+  .ph-sec .ph { grid-template-columns: 96px 1fr; column-gap: 14px; }
+  .ph-sec .ph-photo, .ph--forest .ph-photo, .ph--blossom .ph-photo, .ph--amber .ph-photo { width: 96px; height: 128px; }
+  .ph-sec .ph-desc { display: none; }
+  .ph-sec .ph-price { font-size: 21px; padding-top: 0; border-top: 0; }
+}
+/* 수목장 안내 페이지 카드: 작은 세로 사진 + 글 */
+.tree-grid--3 .tree-card { display: grid; grid-template-columns: 112px 1fr; column-gap: 14px; align-items: start; }
+.tree-grid--3 .tree-card .photo { grid-row: 1 / span 3; grid-column: 1; width: 112px; aspect-ratio: 3 / 4; margin: 0; background-position: 50% 50%; }
+.tree-grid--3 .tree-card h3, .tree-grid--3 .tree-card p { grid-column: 2; }
+.tree-grid--3 .tree-card h3 { margin-top: 2px; }
+@media (min-width: 768px) {
+  .ph-sec .ph { grid-template-columns: 108px 1fr; column-gap: 14px; }
+  .ph-sec .ph-photo, .ph--forest .ph-photo, .ph--blossom .ph-photo, .ph--amber .ph-photo { width: 108px; height: 144px; }
+  .ph-sec .ph-price { font-size: 18px; white-space: nowrap; }
+}
+@media (max-width: 767px) { .ph-sec .ph-desc { display: block; font-size: 13.5px; margin: 2px 0 6px; } }
