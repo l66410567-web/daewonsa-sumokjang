@@ -2616,3 +2616,7 @@ main#main > .trust2 { order: 7; } main#main > .ph-sec { order: 8; } main#main > 
   .ph { grid-template-columns: 124px 1fr; column-gap: 14px; }
   .ph-photo { width: 124px; height: 96px; }
 }
+
+/* 추모목 카드 사진: 줄기 아래쪽(바닥)이 항상 보이도록 하단 기준 */
+.ph-photo, .ph--forest .ph-photo, .ph--blossom .ph-photo, .ph--amber .ph-photo { object-position: 50% 100%; }
+.tree-card .photo { background-position: 50% 100%; }
