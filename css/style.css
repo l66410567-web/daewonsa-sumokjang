@@ -2620,3 +2620,7 @@ main#main > .trust2 { order: 7; } main#main > .ph-sec { order: 8; } main#main > 
 /* 추모목 카드 사진: 줄기 아래쪽(바닥)이 항상 보이도록 하단 기준 */
 .ph-photo, .ph--forest .ph-photo, .ph--blossom .ph-photo, .ph--amber .ph-photo { object-position: 50% 100%; }
 .tree-card .photo { background-position: 50% 100%; }
+
+/* 개인목 사진은 원래 구도로 되돌림(부부목·가족목만 하단 기준) */
+.ph--forest .ph-photo { object-position: 50% 70%; }
+.tree-grid .tree-card:first-child .photo { background-position: center; }
