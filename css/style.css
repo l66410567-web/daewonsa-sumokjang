@@ -2597,3 +2597,15 @@ main#main > .trust2 { order: 7; } main#main > .ph-sec { order: 8; } main#main > 
 .price-visit { margin: 18px auto 0; max-width: 760px; padding: 14px 18px; border-radius: 12px; text-align: center; font-size: 15.5px; line-height: 1.65; color: #33332e;
   background: #fff; border: 1px solid rgba(40,67,54,.3); box-shadow: inset 0 0 0 4px #fff, inset 0 0 0 5px rgba(176,138,62,.45); }
 .price-visit a { color: #284336; font-weight: 700; white-space: nowrap; }
+
+/* =========================================================
+   '예약 방문 시 친환경 봉안함 지급' 3요소 색 구분 (예약=청, 봉안함=적, 지급=금)
+   ========================================================= */
+.g-when, .visit-note .g-when, .vn-gift .g-when { color: #1B5E8A; font-weight: 700; }
+.g-item, .visit-note .g-item, .vn-gift .g-item { color: #B3261E; font-weight: 700; }
+.g-give, .visit-note .g-give, .vn-gift .g-give { color: #9A6A00; font-weight: 700; }
+.vf-chips .g-when, .vf-chips .g-item, .vf-chips .g-give { font-weight: 700; }
+/* 어두운 배경(히어로 배지·마무리 띠)용 밝은 톤 */
+.mhero .visit-must .vm-sub .g-when, .closing .g-when { color: #9ED2F5 !important; font-weight: 700; }
+.mhero .visit-must .vm-sub .g-item, .closing .g-item { color: #FFA79B !important; font-weight: 700; }
+.mhero .visit-must .vm-sub .g-give, .closing .g-give { color: #F5D878 !important; font-weight: 700; }
