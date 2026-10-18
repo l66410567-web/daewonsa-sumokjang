@@ -2585,3 +2585,15 @@ body { color: #131513; }
 .moments .mm-list li:last-child { display: block !important; }
 @media (min-width: 768px) { .moments .mm-list { grid-template-columns: repeat(3, 1fr) !important; } }
 @media (min-width: 768px) and (max-width: 1023px) { .moments .mm-list { gap: 14px; } .moments .mm { padding: 22px 18px 20px; } .moments .mm h3 { font-size: 19px; } }
+
+/* =========================================================
+   메인 흐름 재구성: 공감 → 가치 → 현장 → 신뢰 → 추모목 안내(금액 없음) → 답사 예약
+   이용료표는 '이용료 안내' 카테고리(guide.html#price)에서 가치 설명 뒤에 공개
+   ========================================================= */
+main#main > .moments { order: 4; } main#main > .lf-sec { order: 5; } main#main > .gal-sec { order: 6; }
+main#main > .trust2 { order: 7; } main#main > .ph-sec { order: 8; } main#main > .vf-sec { order: 9; }
+.ph-sec .ph-price { font-size: 22px; }
+.ph-sec .ph-cta .btn--line { display: inline-flex !important; }
+.price-visit { margin: 18px auto 0; max-width: 760px; padding: 14px 18px; border-radius: 12px; text-align: center; font-size: 15.5px; line-height: 1.65; color: #33332e;
+  background: #fff; border: 1px solid rgba(40,67,54,.3); box-shadow: inset 0 0 0 4px #fff, inset 0 0 0 5px rgba(176,138,62,.45); }
+.price-visit a { color: #284336; font-weight: 700; white-space: nowrap; }
