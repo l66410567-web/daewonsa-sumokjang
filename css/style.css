@@ -2784,3 +2784,16 @@ body { color: #1B1B14; }
 .mm h3, .ph-kind, .m2 b, .vf-steps b, .more-card b, .lf-a b, .q5 b, .ph-notes b,
 .tree-card h3, .sp-card h4, .cg-item h2, .faq-item summary, .info-card h3, .three-card h3, .steps li b, .whatis h2, .whatis h3, .value-strip b, .sp-grow > b, .sp-title, .urg-slim.guide-slim .urg-txt b, .visit-note b { color: #1B1B14 !important; }
 .mm p, .ph-desc, .q5 li > span:last-child, .sp-card p, .faq-a, .faq-a p, .cg-why, .cg-ours span, .lf-a, .vf-steps p, .near-list span { color: #23231a; }
+
+/* 메인 슬라이드: 올리브·금·먹색을 은은하게 */
+.mhero .slide::after { background: linear-gradient(180deg, rgba(14,16,6,.18) 0%, rgba(14,16,6,.08) 26%, rgba(14,16,6,.48) 50%, rgba(10,10,4,.88) 100%); }
+.mhero .slider-dots button::after { background: #EBD99A; }
+.mhero .slider-dots button::before, .mhero .slider-dots button[aria-current="true"]::before { background: rgba(255,255,255,.38); }
+.mhero .slider-arrow { color: rgba(235,217,154,.85); }
+.mhero .slider-arrow:hover { color: #FFF3C8; }
+.mhero .scroll-ind { color: #EBD99A; }
+.mhero .mhero-cta .btn--call { background: linear-gradient(145deg, #628A12, #3F5C03); border: 1.5px solid #EBD99A;
+  box-shadow: 0 0 0 1.5px rgba(14,14,8,.75), 0 14px 28px -12px rgba(0,0,0,.6); }
+.mhero .mhero-cta .btn--glass { background: rgba(14,14,8,.38); border: 1.5px solid #EBD99A; color: #fff;
+  box-shadow: 0 0 0 1.5px rgba(14,14,8,.75), 0 14px 28px -12px rgba(0,0,0,.6); }
+.mhero .visit-must--hero { background: rgba(14,14,8,.52); border: 1.5px solid rgba(235,217,154,.85); box-shadow: 0 0 0 1.5px rgba(14,14,8,.7); }
