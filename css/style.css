@@ -2848,3 +2848,34 @@ body { color: #1B1B14; }
 .trust2 .tr-list b, .trust2 b { color: #F6EED3 !important; }
 .trust2 .tr-desc { color: rgba(246,238,211,.74) !important; }
 .trust2 .tr-ic { box-shadow: 0 0 0 3px #171B12, 0 0 0 4.5px rgba(227,205,138,.85), 0 12px 24px -10px rgba(0,0,0,.7) !important; }
+
+/* 이용료 표: 나무별 카드로 분리(황금회화나무=금, 전나무=올리브) */
+.pt-block { margin-top: 26px; padding: 18px 18px 14px; border-radius: 18px; background: #fff; border: 1.5px solid rgba(24,24,16,.88);
+  box-shadow: inset 0 0 0 4px #fff, inset 0 0 0 5px rgba(176,138,62,.55), 0 20px 40px -26px rgba(40,52,8,.4); }
+.pt-block + .pt-block { margin-top: 30px; }
+.pt-head { display: flex; align-items: center; gap: 14px; margin: 0 0 14px; padding-bottom: 12px; border-bottom: 1px solid rgba(24,24,16,.18); }
+.pt-ic { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: 50%; }
+.pt-ic svg { width: 34px; height: 34px; fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.pt-head h3 { margin: 0; font-family: var(--serif); font-size: 26px; line-height: 1.2; color: #1B1B14; }
+.pt-head p { margin: 4px 0 0; font-size: 14.5px; color: #3a382f; }
+.pt-head p b { font-weight: 700; }
+.pt-gold { background: linear-gradient(180deg, #FFFBEC, #FBF3D8); }
+.pt-gold .pt-ic { background: linear-gradient(145deg, #F3E4AE, #D4B055 50%, #A9822A); box-shadow: 0 0 0 3px #fff, 0 0 0 4.5px rgba(24,24,16,.85); }
+.pt-gold .pt-ic svg { stroke: #2F4306; }
+.pt-gold .pt-head h3 { color: #5E4208; }
+.pt-gold .pt-head p b { color: #8A5A0E; }
+.pt-gold .price-tbl thead th { background: linear-gradient(180deg, #E9D08B, #D4B055) !important; color: #2F2406 !important; }
+.pt-fir { background: linear-gradient(180deg, #FAFCF2, #F1F5E2); }
+.pt-fir .pt-ic { background: linear-gradient(145deg, #6B9014, #2F4306); box-shadow: 0 0 0 3px #fff, 0 0 0 4.5px rgba(24,24,16,.85); }
+.pt-fir .pt-ic svg { stroke: #EBD99A; fill: rgba(235,217,154,.15); }
+.pt-fir .pt-head h3 { color: #33450A; }
+.pt-fir .pt-head p b { color: #4F700A; }
+.pt-fir .price-tbl thead th { background: linear-gradient(180deg, #5C8012, #3F5C03) !important; color: #fff !important; }
+.pt-block .tbl-wrap { margin: 0; }
+.pt-note { margin: 10px 2px 2px; font-size: 14px; color: #3a382f; }
+@media (max-width: 767px) { .pt-block { padding: 14px 12px 12px; } .pt-head h3 { font-size: 22px; } .pt-ic { width: 46px; height: 46px; } .pt-ic svg { width: 28px; height: 28px; } }
+@media (max-width: 767px) {
+  .pt-block .price-tbl th, .pt-block .price-tbl td { padding-left: 6px; padding-right: 6px; font-size: 14px; }
+  .pt-block .price-tbl td.price { font-size: 14.5px; white-space: nowrap; }
+  .pt-block .price-tbl thead th { font-size: 13.5px; }
+}
