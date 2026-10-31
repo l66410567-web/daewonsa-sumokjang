@@ -2906,3 +2906,43 @@ body { color: #1B1B14; }
 .mm.mm--forest { background: #FCF1F2 !important; }
 .mm.mm--temple { background: #EEF2E6 !important; }
 .mm.mm--amber { background: #F4EFE4 !important; }
+
+/* 이용료: 한 박스에 두 나무 나란히 + 하단 관리비 요약 + 작은 신도 가입 안내 */
+.pt-one { margin-top: 26px; padding: 20px 20px 16px; border-radius: 18px; background: #fff; border: 1.5px solid rgba(24,24,16,.88);
+  box-shadow: inset 0 0 0 4px #fff, inset 0 0 0 5px rgba(176,138,62,.55), 0 20px 40px -26px rgba(40,52,8,.4); }
+.pt-one-head { margin: 0 0 14px; text-align: center; }
+.pt-one-head h3 { margin: 0; font-family: var(--serif); font-size: 26px; color: #1B1B14; }
+.pt-one-head p { margin: 4px 0 0; font-size: 14.5px; color: #3a382f; }
+.pt-one .tbl-wrap { margin: 0; }
+.price-tbl--one thead th { background: #2B2B20 !important; color: #F6EED3 !important; vertical-align: middle; }
+.price-tbl--one thead th.th-gold { background: linear-gradient(180deg, #EBD28F, #D4B055) !important; color: #2F2406 !important; }
+.price-tbl--one thead th.th-fir { background: linear-gradient(180deg, #5C8012, #3F5C03) !important; color: #fff !important; }
+.price-tbl--one thead th small { display: block; margin-top: 3px; font-size: 12px; font-weight: 500; opacity: .85; }
+.price-tbl--one .th-ic { display: inline-flex; width: 22px; height: 22px; margin-right: 6px; vertical-align: -4px; }
+.price-tbl--one .th-ic svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.price-tbl--one td.c-gold { background: #FFF9E6; }
+.price-tbl--one td.c-fir { background: #F5F8EA; }
+.price-tbl--one td.price { font-size: 17px; font-weight: 800; color: #1B1B14; }
+.price-tbl--one tr.tr-more td { font-size: 14px; color: #3a382f; }
+.pt-fee { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 16px; margin: 16px 0 0; padding: 12px 16px; border-radius: 12px; background: #FBF8EC; box-shadow: 0 0 0 1px rgba(24,24,16,.7), inset 0 0 0 3px #fff, inset 0 0 0 4px rgba(176,138,62,.45); }
+.pt-fee b { font-family: var(--serif); font-size: 17px; color: #1B1B14; }
+.pt-fee b small { font-size: 13px; font-weight: 500; }
+.pt-fee ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 14px; margin: 0; padding: 0; }
+.pt-fee li { font-size: 16px; font-weight: 800; color: #1B1B14; }
+.pt-fee li em { font-style: normal; font-weight: 500; font-size: 14px; color: #4a473e; margin-right: 6px; }
+.pt-fee span { flex-basis: 100%; text-align: center; font-size: 13px; color: #4a473e; }
+.pt-member { margin: 10px 0 0; text-align: center; font-size: 12.5px; color: #6b685c; }
+@media (max-width: 767px) {
+  .pt-one { padding: 16px 10px 14px; }
+  .pt-one-head h3 { font-size: 22px; }
+  .price-tbl--one th, .price-tbl--one td { padding-left: 4px; padding-right: 4px; font-size: 13px; }
+  .price-tbl--one td.price { font-size: 13.5px; }
+  .price-tbl--one thead th { font-size: 13px; }
+  .price-tbl--one .th-ic { display: none; }
+  .pt-fee li { font-size: 15px; }
+}
+@media (max-width: 767px) {
+  .price-tbl--one thead th:nth-child(1), .price-tbl--one tbody th { width: 17%; }
+  .price-tbl--one thead th:nth-child(2) { width: 14%; }
+  .price-tbl--one td.price { white-space: nowrap; font-size: 13px; }
+}
