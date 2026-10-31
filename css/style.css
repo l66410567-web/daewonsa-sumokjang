@@ -2963,3 +2963,6 @@ body { color: #1B1B14; }
 .value-strip div:nth-child(2) b::before { background: #587A0B; height: 2px; }
 .value-strip div:nth-child(3) b::before { background: #A8455A; height: 2px; }
 .value-strip div:nth-child(4) b::before { background: #8A5A2B; height: 2px; }
+.sp-card.sp-fir { background: linear-gradient(180deg, #F3F7E6 0%, #E6EDD2 100%); border-color: rgba(24,24,16,.8); }
+.sp-card.sp-fir .sp-ic { background: #DDE7C2; }
+.sp-card.sp-fir h4 small { color: #4F700A; }
