@@ -2831,3 +2831,20 @@ body { color: #1B1B14; }
   .visit-note > div { min-width: 0; flex: 1; }
   .visit-note b { font-size: 17px; }
 }
+
+/* =========================================================
+   신뢰 띠 배경 재설계: 채도 높은 올리브 → 먹빛 숲색(저채도 깊은 녹갈색) + 은은한 금빛 광 + 미세 질감
+   ========================================================= */
+.trust2 {
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .96 0 0 0 0 .85 0 0 0 .045 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E"),
+    radial-gradient(70% 90% at 50% -8%, rgba(235,217,154,.13) 0%, rgba(235,217,154,0) 62%),
+    linear-gradient(180deg, #262D1D 0%, #171B12 100%) !important; }
+.trust2 .tr-head h2 { color: #F8F1DB !important; }
+.trust2 .eyebrow { color: #E3CD8A !important; }
+.trust2 .tr-list { background: rgba(255,250,232,.035) !important; border: 1px solid rgba(227,205,138,.55) !important;
+  box-shadow: inset 0 0 0 6px #171B12, inset 0 0 0 7px rgba(227,205,138,.2), 0 30px 60px -34px rgba(0,0,0,.75) !important; }
+.trust2 .tr-list li { border-color: rgba(227,205,138,.22) !important; }
+.trust2 .tr-list b, .trust2 b { color: #F6EED3 !important; }
+.trust2 .tr-desc { color: rgba(246,238,211,.74) !important; }
+.trust2 .tr-ic { box-shadow: 0 0 0 3px #171B12, 0 0 0 4.5px rgba(227,205,138,.85), 0 12px 24px -10px rgba(0,0,0,.7) !important; }
