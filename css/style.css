@@ -2973,3 +2973,7 @@ body { color: #1B1B14; }
 .q5 li:nth-child(2) { background: #FBF1D3; }
 .q5 li:nth-child(3) { background: #FCF1F2; }
 .q5 li:nth-child(4) { background: #EEF2E6; }
+
+/* '수목장, 어떻게 고르시나요?' 안내 줄: 연한 세이지(위 띠·아래 카드와 같은 색 계열) */
+.urg-slim.guide-slim { background: #E9EFD9 !important; }
+.urg-slim.guide-slim .urg-txt em { color: #3a4a14; }
