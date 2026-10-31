@@ -2966,3 +2966,10 @@ body { color: #1B1B14; }
 .sp-card.sp-fir { background: linear-gradient(180deg, #F3F7E6 0%, #E6EDD2 100%); border-color: rgba(24,24,16,.8); }
 .sp-card.sp-fir .sp-ic { background: #DDE7C2; }
 .sp-card.sp-fir h4 small { color: #4F700A; }
+
+/* 한눈에 보기 띠: 칸마다 배경색을 달리(대원사=베이지, 영구 안치=금빛, 벚꽃길=분홍, 광주 40분=연두) */
+.q5 { background: #fff !important; }
+.q5 li:nth-child(1) { background: #F4EFE4; }
+.q5 li:nth-child(2) { background: #FBF1D3; }
+.q5 li:nth-child(3) { background: #FCF1F2; }
+.q5 li:nth-child(4) { background: #EEF2E6; }
