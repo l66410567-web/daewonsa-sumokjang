@@ -2901,3 +2901,8 @@ body { color: #1B1B14; }
 .ph-member { display: inline-block; margin-left: 4px; color: #4a473e; }
 
 .faq-item { scroll-margin-top: 92px; }
+
+/* '이런 순간에' 카드 배경: 꽃길숲 이야기 카드(벚꽃·차·위로)와 같은 세 가지 연한 색 */
+.mm.mm--forest { background: #FCF1F2 !important; }
+.mm.mm--temple { background: #EEF2E6 !important; }
+.mm.mm--amber { background: #F4EFE4 !important; }
