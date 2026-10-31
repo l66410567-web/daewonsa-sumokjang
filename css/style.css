@@ -2689,3 +2689,15 @@ main#main > .trust2 { order: 7; } main#main > .ph-sec { order: 8; } main#main > 
 .ph-species em { font-style: normal; font-weight: 700; color: #2F5A22; }
 .ph-species b { color: #6B4A06; }
 .ph-species a { display: inline-block; margin-left: 4px; font-weight: 700; color: #284336; white-space: nowrap; }
+
+/* 안치 일지(둘러보기) · 가격표 아래 설명 최소화 */
+.ilji { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.ilji li { position: relative; overflow: hidden; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px rgba(176,138,62,.5), 0 10px 22px -14px rgba(20,36,28,.4); }
+.ilji li:last-child { grid-column: 1 / -1; }
+.ilji img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+.ilji li:last-child img { aspect-ratio: 16 / 9; object-position: 50% 35%; }
+.ilji b { display: block; padding: 8px 10px 10px; text-align: center; font-family: var(--serif); font-size: 15.5px; color: #23401A; }
+@media (min-width: 768px) { .ilji { grid-template-columns: repeat(5, 1fr); gap: 12px; } .ilji li:last-child { grid-column: auto; } .ilji li:last-child img { aspect-ratio: 3 / 4; object-position: 50% 50%; } }
+.ilji-note { margin: 12px 0 0; text-align: center; font-size: 14.5px; color: #4a473e; }
+.tbl-notes { margin-top: 8px; }
+.tbl-title + .tbl-wrap { margin-top: 8px; }
