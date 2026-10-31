@@ -2797,3 +2797,37 @@ body { color: #1B1B14; }
 .mhero .mhero-cta .btn--glass { background: rgba(14,14,8,.38); border: 1.5px solid #EBD99A; color: #fff;
   box-shadow: 0 0 0 1.5px rgba(14,14,8,.75), 0 14px 28px -12px rgba(0,0,0,.6); }
 .mhero .visit-must--hero { background: rgba(14,14,8,.52); border: 1.5px solid rgba(235,217,154,.85); box-shadow: 0 0 0 1.5px rgba(14,14,8,.7); }
+
+/* 정리: 노란 형광펜 강조 제거(차분하게), 상담 안내 박스 2줄 정돈 */
+.hl-sacred, .hl-mark, .sec-title .hl-mark { background: none !important; }
+.hl-sacred { color: #33450A; }
+.duo-call .visit-must { display: flex; align-items: center; gap: 12px; width: 100%; max-width: 440px; margin: 18px 0 20px; padding: 12px 18px; border-radius: 14px; }
+.duo-call .visit-must b { display: block; font-size: 16.5px; }
+.duo-call .visit-must b::after { display: none; }
+.duo-call .visit-must .vm-sub { display: block; margin-top: 3px; font-size: 14.5px; font-weight: 500; }
+.duo-call .btn-row { margin-top: 0; }
+
+/* 상담 안내 박스 주소: 두 칸으로 정돈(라벨 · 주소 · 지도 버튼) */
+.duo-call .addr { grid-template-columns: 1fr; gap: 12px; margin-top: 22px; max-width: none; }
+@media (min-width: 768px) { .duo-call .addr { grid-template-columns: 1fr 1fr; } }
+.duo-call .addr div { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; padding: 14px 18px 16px; border-radius: 12px;
+  background: #FBF8EC; box-shadow: 0 0 0 1px rgba(24,24,16,.75), inset 0 0 0 3px #fff, inset 0 0 0 4px rgba(176,138,62,.5); font-size: 16.5px; line-height: 1.5; color: #1B1B14; }
+.duo-call .addr b { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: .08em; color: #587A0B; }
+.duo-call .addr .visit-mini { margin: 0; font-size: 13.5px; color: #4a473e; }
+.duo-call .map-links { display: flex; gap: 8px; margin: 8px 0 0; }
+.duo-call .map-links a { padding: 3px 13px; border-radius: 99px; border: 1px solid rgba(24,24,16,.7); background: #fff; font-size: 13.5px; font-weight: 600; color: #1B1B14; text-decoration: none; }
+.duo-call .map-links a:hover { background: #587A0B; color: #fff; border-color: #587A0B; }
+.duo-call .visit-must { border: 1.5px solid rgba(24,24,16,.75); background: #FBF8EC; }
+
+/* 답사 안내 상자의 봉안함 문구: 칸이 쪼개지던 문제 수정 + 알약 상자 대신 한 줄 */
+.vn-gift span, .vn-gift b, .vn-gift .g-when, .vn-gift .g-item, .vn-gift .g-give { display: inline !important; margin: 0 !important; padding: 0 !important; font: inherit; font-weight: 700; }
+.visit-note .vn-gift, .vn-gift { display: block !important; margin: 8px 0 0 !important; padding: 0 !important; background: none !important; border: 0 !important; box-shadow: none !important; border-radius: 0 !important;
+  font-style: normal; font-size: 15.5px; line-height: 1.6; color: #1B1B14; }
+.vn-gift::before { content: ""; display: inline-block !important; width: 8px; height: 8px; margin: 0 8px 2px 0 !important; border-radius: 50%; background: #D4B055 !important; vertical-align: middle; }
+.vn-gift .g-when { color: #1B5E8A; } .vn-gift .g-give { color: #9A6A00; } .vn-gift b.gift-red, .vn-gift .g-item { color: #B3261E; }
+@media (max-width: 767px) {
+  .visit-note { gap: 12px !important; padding: 14px 14px !important; align-items: flex-start !important; }
+  .visit-note > svg { flex: none; width: 38px !important; height: 38px !important; padding: 8px !important; margin-top: 2px; box-sizing: border-box; }
+  .visit-note > div { min-width: 0; flex: 1; }
+  .visit-note b { font-size: 17px; }
+}
