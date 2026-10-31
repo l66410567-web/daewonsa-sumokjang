@@ -2946,3 +2946,7 @@ body { color: #1B1B14; }
   .price-tbl--one thead th:nth-child(2) { width: 14%; }
   .price-tbl--one td.price { white-space: nowrap; font-size: 13px; }
 }
+.pt-one-head p.pt-life { margin: 6px 0 0; font-family: var(--serif); font-size: 16px; color: #4F5E10; }
+.pt-why { margin: 8px 2px 0; text-align: center; font-size: 13px; color: #4a473e; }
+.pt-why b { font-weight: 700; color: #1B1B14; }
+@media (max-width: 767px) { .pt-one-head p.pt-life { font-size: 14.5px; } }
