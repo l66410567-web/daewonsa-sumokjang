@@ -2951,3 +2951,15 @@ body { color: #1B1B14; }
 .pt-why b { font-weight: 700; color: #1B1B14; }
 @media (max-width: 767px) { .pt-one-head p.pt-life { font-size: 14.5px; } }
 .pt-one-head p.pt-life { color: #2B3A07; font-weight: 700; }
+
+/* 가치 4칸: 칸마다 배경색을 달리해 각각 부각 (꽃길숲 이야기 카드와 같은 연한 색 계열) */
+.value-strip { background: transparent !important; border: 0 !important; gap: 12px !important; overflow: visible !important; }
+.value-strip div { border-radius: 16px; }
+.value-strip div:nth-child(1) { background: #FBF1D3 !important; }
+.value-strip div:nth-child(2) { background: #EEF2E6 !important; }
+.value-strip div:nth-child(3) { background: #FCF1F2 !important; }
+.value-strip div:nth-child(4) { background: #F4EFE4 !important; }
+.value-strip div:nth-child(1) b::before { background: #B08A3E; height: 2px; }
+.value-strip div:nth-child(2) b::before { background: #587A0B; height: 2px; }
+.value-strip div:nth-child(3) b::before { background: #A8455A; height: 2px; }
+.value-strip div:nth-child(4) b::before { background: #8A5A2B; height: 2px; }
