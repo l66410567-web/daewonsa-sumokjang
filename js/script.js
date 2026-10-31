@@ -162,3 +162,27 @@
     update();
   }
 })();
+
+
+/* FAQ: 주소의 #id 로 해당 질문만 열고 그 위치로 이동 */
+(function () {
+  function go(el) {
+    var y = el.getBoundingClientRect().top + window.pageYOffset - 96;
+    window.scrollTo({ top: y < 0 ? 0 : y, behavior: 'instant' });
+  }
+  function openFaqFromHash() {
+    var h = location.hash;
+    if (!h || h.length < 2) return;
+    var el = null;
+    try { el = document.querySelector(h); } catch (e) { return; }
+    if (!el || el.tagName !== 'DETAILS') return;
+    document.querySelectorAll('details.faq-item[open]').forEach(function (d) { if (d !== el) d.removeAttribute('open'); });
+    el.open = true;
+    go(el);
+    setTimeout(function () { go(el); }, 250);
+    setTimeout(function () { go(el); }, 900);
+  }
+  window.addEventListener('hashchange', openFaqFromHash);
+  window.addEventListener('load', openFaqFromHash);
+  if (document.readyState === 'complete') openFaqFromHash();
+})();

@@ -2899,3 +2899,5 @@ body { color: #1B1B14; }
 .mhero .slide::after { background: linear-gradient(180deg, rgba(14,16,6,.10) 0%, rgba(14,16,6,.04) 30%, rgba(14,16,6,.26) 58%, rgba(10,10,4,.52) 100%) !important; }
 @media (max-width: 767px) { .mhero .slide::after { background: linear-gradient(180deg, rgba(14,16,6,.08) 0%, rgba(14,16,6,.03) 34%, rgba(14,16,6,.22) 62%, rgba(10,10,4,.46) 100%) !important; } }
 .ph-member { display: inline-block; margin-left: 4px; color: #4a473e; }
+
+.faq-item { scroll-margin-top: 92px; }
