@@ -2977,3 +2977,7 @@ body { color: #1B1B14; }
 /* '수목장, 어떻게 고르시나요?' 안내 줄: 연한 세이지(위 띠·아래 카드와 같은 색 계열) */
 .urg-slim.guide-slim { background: #E9EFD9 !important; }
 .urg-slim.guide-slim .urg-txt em { color: #3a4a14; }
+
+/* 빨강 강조: 영구 안치 문구(글씨) · '60년이 끝이 아닙니다' 문장(밑줄) */
+.pt-one-head p.pt-life { color: #C62828; font-weight: 800; }
+.ph-aside-main { text-decoration: underline; text-decoration-color: #D32F2F; text-decoration-thickness: 2.5px; text-underline-offset: 7px; }
