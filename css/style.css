@@ -2981,3 +2981,6 @@ body { color: #1B1B14; }
 /* 빨강 강조: 영구 안치 문구(글씨) · '60년이 끝이 아닙니다' 문장(밑줄) */
 .pt-one-head p.pt-life { color: #C62828; font-weight: 800; }
 .ph-aside-main { text-decoration: underline; text-decoration-color: #D32F2F; text-decoration-thickness: 2.5px; text-underline-offset: 7px; }
+
+/* '가족을 위한 마지막 준비, 미리 보고 정하세요' 빨강 밑줄 */
+.moments .sec-title { text-decoration: underline; text-decoration-color: #D32F2F; text-decoration-thickness: 3px; text-underline-offset: 9px; text-decoration-skip-ink: none; }
