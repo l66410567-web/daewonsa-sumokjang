@@ -2984,3 +2984,8 @@ body { color: #1B1B14; }
 
 /* '가족을 위한 마지막 준비, 미리 보고 정하세요' 빨강 밑줄 */
 .moments .sec-title { text-decoration: underline; text-decoration-color: #D32F2F; text-decoration-thickness: 3px; text-underline-offset: 9px; text-decoration-skip-ink: none; }
+
+/* 빨강 강조 (밑줄 4곳 중 3곳 + 글씨 1곳) */
+.lf-sec .sec-title, .compare-sec .sec-title, .trust2 .tr-head h2, .near-sec .sec-title {
+  text-decoration: underline; text-decoration-color: #D32F2F; text-decoration-thickness: 3px; text-underline-offset: 9px; text-decoration-skip-ink: none; }
+.near-sec .lead .hl-sacred, .near-sec .lead strong { color: #C62828 !important; }
