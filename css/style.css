@@ -2992,3 +2992,7 @@ body { color: #1B1B14; }
 
 .rv-cta { margin: 14px 0 0; }
 .rv-cta .btn { width: 100%; max-width: 360px; }
+
+/* 모바일 하단 바: 문자 버튼 삭제 → 2칸 */
+.mbar { grid-template-columns: 1fr 1fr !important; }
+.ug-help-btns .ug-btn--main { flex: 1 1 100%; }
