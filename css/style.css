@@ -2996,3 +2996,15 @@ body { color: #1B1B14; }
 /* 모바일 하단 바: 문자 버튼 삭제 → 2칸 */
 .mbar { grid-template-columns: 1fr 1fr !important; }
 .ug-help-btns .ug-btn--main { flex: 1 1 100%; }
+
+/* 푸터 사업자 정보: 아주 작게(내용은 그대로) */
+.f-biz { margin: 4px 0 14px; padding: 10px 14px 10px; border-radius: 10px; }
+.f-biz-h { gap: 8px; margin: 0 0 8px; padding-bottom: 7px; font-size: 13px; letter-spacing: .08em; }
+.f-biz-h::before { width: 20px; height: 20px; background-size: 11px; }
+.f-biz-role { margin: 0 0 8px; font-size: 12.5px; line-height: 1.55; }
+.f-biz dl { gap: 6px 14px; }
+.f-biz dl div { padding-left: 8px; border-left-width: 1.5px; }
+.f-biz dt { margin-bottom: 1px; font-size: 11px; letter-spacing: .06em; }
+.f-biz dd { font-size: 13px; line-height: 1.35; }
+@media (min-width: 768px) { .f-biz { padding: 10px 16px; } .f-biz dd { font-size: 13px; } .f-biz dl { gap: 6px 18px; } }
+@media (min-width: 900px) { .f-biz dl { grid-template-columns: 1fr 1fr 1.2fr; gap: 6px 18px; } .f-biz dd { font-size: 13px; } }
