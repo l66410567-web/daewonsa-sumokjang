@@ -3676,3 +3676,19 @@ body.sub main :is(.render-tag, .shot-future) { font-size: 13.5px !important; }
   body.sub .price-tbl .price, body.sub .price-tbl .tr-more td { font-size: 14px; }
   body.sub .price-tbl thead th { font-size: 14px; }
 }
+
+/* 안치 절차(.steps): 번호 도장이 제목을 가리던 문제 수정 */
+body.sub .steps { display: grid; gap: 14px; margin: 34px 0 14px; }
+body.sub .steps li { position: relative; padding: 20px 20px 22px 88px !important; }
+body.sub .steps li::before {
+  content: counter(st); position: absolute; left: 20px; top: 20px; right: auto; bottom: auto; width: 50px; height: 50px; margin: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: none !important; border: 2px solid var(--h-red) !important; border-radius: 6px !important; box-shadow: none !important;
+  color: var(--h-red) !important; font-family: var(--sans) !important; font-weight: 700; font-size: 22px; line-height: 1;
+}
+body.sub .steps b { display: block; margin-bottom: 6px; line-height: 1.4; }
+body.sub .steps span { display: block; line-height: 1.8; }
+@media (min-width: 1024px) {
+  body.sub .steps { grid-template-columns: repeat(5, 1fr); gap: 16px; }
+  body.sub .steps li { padding: 86px 20px 24px !important; }
+}
