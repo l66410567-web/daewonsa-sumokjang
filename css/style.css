@@ -3036,3 +3036,23 @@ body { color: #1B1B14; }
 .site-footer .f-biz dl div + div::before { content: none; }
 .site-footer .f-biz dl div:not(:last-child)::after { content: "|"; margin: 0 10px 0 5px; color: rgba(60,50,25,.35); }
 @media (max-width: 767px) { .site-footer .f-biz dl div:not(:last-child)::after { margin: 0 7px 0 4px; } }
+
+/* 모바일 메인 슬라이드: 답사 예약은 차분한 텍스트 링크 + 작은 안내 한 줄 (버튼·알약 제거)
+   전화·답사 예약은 하단 고정 바가 맡는다 */
+@media (max-width: 767px) {
+  .mhero .mhero-cta { bottom: 112px; gap: 6px; align-items: center; }
+  .mhero .mhero-cta .btn--call {
+    width: auto !important; min-height: 0 !important; height: auto !important; padding: 4px 2px 5px !important;
+    background: none !important; border: 0 !important; border-bottom: 1px solid rgba(255,255,255,.72) !important;
+    border-radius: 0 !important; box-shadow: none !important; font-size: 15px !important; font-weight: 600 !important;
+    letter-spacing: .02em; color: #fff; text-shadow: 0 1px 10px rgba(0,0,0,.45); gap: 6px;
+  }
+  .mhero .mhero-cta .btn--call svg { display: none !important; }
+  .mhero .mhero-cta .btn--call::after { content: "›"; margin-left: 5px; font-size: 18px; line-height: 1; font-weight: 400; }
+  .mhero .visit-must--hero {
+    background: none !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; margin: 4px 0 0 !important;
+    max-width: none; font-size: 12.5px; text-shadow: 0 1px 8px rgba(0,0,0,.5);
+  }
+  .mhero .visit-must--hero svg { display: none !important; }
+  .mhero .visit-must--hero b { color: rgba(255,255,255,.8) !important; font-weight: 500; letter-spacing: .02em; }
+}
