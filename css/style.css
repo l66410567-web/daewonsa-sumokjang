@@ -3750,3 +3750,29 @@ body.sub .steps span { display: block; line-height: 1.8; }
   .site-header .header-call.btn { height: 48px; min-height: 48px !important; }
   .site-header .header-call.btn svg { width: 32px !important; height: 32px !important; padding: 7px !important; }
 }
+
+/* 예약이 필요한 이유 안내(작은 설명) */
+.mhero .visit-must--hero > span { display: block !important; text-align: center; }
+.mhero .visit-must--hero .vm-why { display: block !important; margin-top: 4px; font-size: 13.5px; font-weight: 500; line-height: 1.6; color: rgba(255,255,255,.82) !important; letter-spacing: 0; text-shadow: 0 1px 8px rgba(0,0,0,.55); }
+@media (min-width: 768px) { .mhero .visit-must--hero .vm-why { font-size: 15px; } }
+.mhero .visit-must--hero .vm-sub { display: inline !important; }
+body.home .vf-why {
+  margin: 18px auto 0; max-width: 760px; padding: 18px 22px; text-align: left; font-size: 16.5px; line-height: 1.8; color: var(--h-body);
+  background: var(--h-paper); border: 1px solid var(--h-bd); border-left: 5px solid var(--h-red); border-radius: 8px;
+}
+body.home .vf-why b { display: block; margin-bottom: 4px; font-size: 17.5px; font-weight: 700; color: var(--h-red); font-family: var(--sans); }
+body.home .closing p { max-width: 640px; margin-left: auto; margin-right: auto; }
+
+/* 모바일/태블릿 헤더: 전화 알약은 PC에서만(하단 고정 바가 대신함) — 메뉴 버튼이 밀려나던 문제 수정 */
+@media (max-width: 1023px) {
+  .site-header .header-call.btn, .site-header .header-call.btn--call { display: none !important; }
+}
+@media (max-width: 767px) {
+  .mhero .visit-must--hero .vm-sub { display: none !important; }
+}
+@media (min-width: 768px) {
+  .mhero .visit-must--hero .vm-why { display: block !important; margin-top: 6px; }
+  .mhero .visit-must--hero > span, .mhero .visit-must--hero span:first-of-type { display: block !important; }
+  .mhero .visit-must--hero .vm-why { display: block !important; }
+  .mhero .visit-must--hero b::after { content: "·"; }
+}
