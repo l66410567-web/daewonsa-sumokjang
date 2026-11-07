@@ -3717,3 +3717,36 @@ body.sub .steps span { display: block; line-height: 1.8; }
 }
 .site-header .header-call.btn:hover, .site-header .header-call.btn--call:hover { background: #fff !important; color: #2F4510 !important; border-color: #E8CF86 !important; }
 .site-header .header-call.btn svg { display: block !important; color: #fff !important; background: #3F5A0A !important; }
+
+/* 헤더: 로고 비율 고정(찌그러짐 방지) + 전화 버튼을 금빛 알약 두 줄 디자인으로 */
+.site-header .brand { flex: 0 0 auto; }
+.site-header .brand img.brand-logo { width: auto !important; max-width: none !important; flex: none; object-fit: contain; }
+.site-header .header-call.btn, .site-header .header-call.btn--call {
+  display: inline-flex; align-items: center; gap: 12px; height: 54px; min-height: 54px !important; padding: 0 24px 0 8px !important; flex: none;
+  border-radius: 999px !important; color: #223408 !important;
+  background: linear-gradient(180deg, #F8EBBE 0%, #DFC174 100%) !important; border: 1px solid #A98733 !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.65), 0 3px 8px rgba(0,0,0,.28) !important;
+}
+.site-header .header-call.btn:hover, .site-header .header-call.btn--call:hover {
+  background: linear-gradient(180deg, #FFF3CC 0%, #E8CC80 100%) !important; color: #223408 !important; border-color: #A98733 !important;
+}
+.site-header .header-call.btn svg { display: block !important; flex: none; width: 38px !important; height: 38px !important; padding: 9px !important; box-sizing: border-box; border-radius: 50% !important; background: #34500B !important; color: #F8EBBE !important; }
+.header-call .hc-t { display: flex; flex-direction: column; line-height: 1.15; text-align: left; white-space: nowrap; }
+.header-call .hc-t small { font-size: 12.5px; font-weight: 700; letter-spacing: .08em; color: #5A4716; }
+.header-call .hc-t b { font-size: 21px; font-weight: 800; letter-spacing: .01em; color: #223408; }
+@media (min-width: 1024px) and (max-width: 1199px) { .header-call .hc-t b { font-size: 19px; } .site-header .header-call.btn { padding-right: 18px !important; gap: 9px; } }
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .site-header .gnb { gap: 20px !important; }
+  .site-header .gnb a { font-size: 16px !important; }
+  .site-header .brand img.brand-logo { height: 64px !important; }
+  .header-call .hc-t b { font-size: 19px; }
+  .site-header .header-call.btn { gap: 9px; padding-right: 18px !important; }
+}
+@media (min-width: 1024px) and (max-width: 1119px) {
+  .site-header .gnb { gap: 14px !important; }
+  .site-header .gnb a { font-size: 15px !important; }
+  .site-header .brand img.brand-logo { height: 56px !important; }
+  .header-call .hc-t small { display: none; }
+  .site-header .header-call.btn { height: 48px; min-height: 48px !important; }
+  .site-header .header-call.btn svg { width: 32px !important; height: 32px !important; padding: 7px !important; }
+}
