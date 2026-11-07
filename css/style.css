@@ -3783,3 +3783,20 @@ body.sub figcaption, body.sub .card-photo figcaption, body.sub .fig figcaption {
   line-height: 1.5; letter-spacing: -.005em; padding: 10px 10px 12px; margin-top: 0;
 }
 body.sub .card-photo figcaption { text-align: center; }
+
+/* 꽃길 따라가기(둘러보기): 글이 상자 왼쪽 끝에 붙던 문제 — 안쪽 여백을 주고 단청 윗줄 상자로 */
+body.sub .trail-stop, body.sub .trail-stop.on, body.sub .trail-stop--end {
+  background: var(--h-paper) !important; border: 1px solid var(--h-bd) !important; border-top: 5px solid #2C5B4B !important;
+  border-radius: 8px !important; box-shadow: none !important; padding: 22px 22px 26px !important; margin: 0 0 24px;
+}
+body.sub .trail-stop:nth-child(4n+3) { border-top-color: #8F3A2A !important; }
+body.sub .trail-stop:nth-child(4n+4) { border-top-color: #94671E !important; }
+body.sub .trail-stop:nth-child(4n+5) { border-top-color: #2F4A6B !important; }
+body.sub .trail-stop:last-child { margin-bottom: 0; }
+body.sub .trail-stop::before { top: 30px; }
+body.sub .trail-stop .trail-km { display: inline-block; margin-bottom: 4px; font-size: 15.5px; font-weight: 700; color: var(--h-red); }
+body.sub .trail-stop h3 { margin: 0 0 10px; font-size: 24px; font-weight: 700; line-height: 1.4; color: var(--h-ink); }
+body.sub .trail-stop p { font-size: 17.5px; line-height: 1.85; margin: 0 0 4px; }
+body.sub .trail-stop .photo, body.sub .trail-stop .fig, body.sub .trail-stop .fig img { margin-top: 14px; border-radius: 8px; }
+body.sub .trail-stop--end .btn-row { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; }
+@media (min-width: 768px) { body.sub .trail-stop, body.sub .trail-stop.on, body.sub .trail-stop--end { padding: 30px 34px 34px !important; } body.sub .trail-stop p { font-size: 18.5px; } }
