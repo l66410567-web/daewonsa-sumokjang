@@ -3454,7 +3454,7 @@ body.sub .eyebrow::before { content: none !important; }
 body.sub .center .eyebrow { margin-left: auto; margin-right: auto; }
 body.sub .src-note, body.sub .note, body.sub .wi-src { font-size: 15.5px; color: var(--h-sub) !important; line-height: 1.7; }
 body.sub .hl-mark, body.sub .hl-sacred { background: none !important; color: inherit; font-weight: 700; }
-body.sub a:not(.btn):not(.ug-btn) { color: var(--h-acc); }
+body.sub main section:not(.page-hero) a:not(.btn):not(.ug-btn) { color: var(--h-acc); }
 body.sub .text-link { font-weight: 700; border-bottom: 1.5px solid currentColor; text-decoration: none; }
 
 /* ---- 버튼 ---- */
@@ -3692,3 +3692,28 @@ body.sub .steps span { display: block; line-height: 1.8; }
   body.sub .steps { grid-template-columns: repeat(5, 1fr); gap: 16px; }
   body.sub .steps li { padding: 86px 20px 24px !important; }
 }
+
+/* =========================================================================
+   상단 메뉴(헤더): 더 진하고 또렷하게 — 짙은 올리브 + 황금 이중선, 흰 글씨, 한지색 전화 버튼
+   ========================================================================= */
+.site-header {
+  background: linear-gradient(180deg, #46650F 0%, #34500B 100%) !important;
+  border-bottom: 4px double #C9A55A !important; box-shadow: 0 3px 12px rgba(24,34,6,.28) !important;
+}
+.gnb a { color: #fff !important; font-weight: 700 !important; font-size: 17px; letter-spacing: 0 !important; text-shadow: 0 1px 2px rgba(0,0,0,.25); }
+@media (min-width: 1024px) and (max-width: 1199px) { .gnb a { font-size: 16px !important; } }
+.gnb a::after { height: 3px !important; background: #E8CF86 !important; bottom: -6px !important; }
+.gnb a:hover, .gnb a[aria-current="page"] { color: #F6E7B0 !important; }
+.header-call {
+  background: #F6F0DE !important; color: #2F4510 !important; border: 1.5px solid #C9A55A !important; border-radius: 8px !important;
+  font-weight: 700 !important; font-size: 18px !important; box-shadow: none !important; letter-spacing: .01em;
+}
+.header-call:hover { background: #fff !important; color: #2F4510 !important; border-color: #E8CF86 !important; }
+.header-call svg { color: #fff !important; background: #3F5A0A !important; }
+.menu-btn { color: #fff !important; }
+.mnav a { color: #2B2418; }
+.site-header .header-call.btn, .site-header .header-call.btn--call {
+  background: #F6F0DE !important; color: #2F4510 !important; border: 1.5px solid #C9A55A !important; border-radius: 8px !important;
+}
+.site-header .header-call.btn:hover, .site-header .header-call.btn--call:hover { background: #fff !important; color: #2F4510 !important; border-color: #E8CF86 !important; }
+.site-header .header-call.btn svg { display: block !important; color: #fff !important; background: #3F5A0A !important; }
