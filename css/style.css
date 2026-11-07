@@ -3367,3 +3367,30 @@ body.home .duo-faq li a span { color: #8F3A2A !important; }
 body.home .closing .eyebrow { display: none; }
 body.home .tr-list li, body.home .tr-list li:nth-child(n) { display: block !important; }
 body.home .tr-list li b, body.home .tr-list li .tr-desc { display: block; width: auto; }
+
+/* PC 메인 슬라이드: 모바일과 같은 방식 — 큰 버튼·알약 대신 차분한 텍스트 링크 + 작은 안내 한 줄 */
+@media (min-width: 768px) {
+  .mhero .mhero-cta { bottom: 128px; gap: 8px 34px; align-items: center; justify-content: center; flex-direction: row; flex-wrap: wrap; }
+  .mhero .mhero-cta .btn--call, .mhero .mhero-cta .btn--glass {
+    width: auto !important; min-height: 0 !important; height: auto !important; padding: 4px 2px 6px !important;
+    background: none !important; border: 0 !important; border-bottom: 1px solid rgba(255,255,255,.75) !important;
+    border-radius: 0 !important; box-shadow: none !important; font-size: 18px !important; font-weight: 600 !important;
+    letter-spacing: .02em; color: #fff !important; text-shadow: 0 1px 10px rgba(0,0,0,.5); gap: 6px;
+  }
+  .mhero .mhero-cta .btn--call svg, .mhero .mhero-cta .btn--glass svg { display: none !important; }
+  .mhero .mhero-cta .btn--call::after { content: "›"; margin-left: 6px; font-size: 20px; line-height: 1; font-weight: 400; }
+  .mhero .mhero-cta .flex-break { display: block; flex-basis: 100%; height: 0; }
+  .mhero .visit-must--hero {
+    background: none !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; margin: 6px 0 0 !important;
+    max-width: none; font-size: 15px; text-shadow: 0 1px 8px rgba(0,0,0,.55); justify-content: center;
+  }
+  .mhero .visit-must--hero svg { display: none !important; }
+  .mhero .visit-must--hero b { color: rgba(255,255,255,.85) !important; font-weight: 500; letter-spacing: .02em; }
+  .mhero .visit-must--hero b::after { display: none !important; }
+  .mhero .visit-must--hero span { display: none !important; }
+  .mhero .visit-must--hero span:first-of-type { display: inline !important; }
+}
+@media (min-width: 768px) {
+  .mhero .visit-must--hero b::after { display: inline-block !important; content: "·"; width: auto; height: auto; background: none; margin: 0 10px; color: rgba(255,255,255,.65); vertical-align: baseline; }
+  .mhero .visit-must--hero .vm-sub { display: inline !important; font-style: normal; }
+}
