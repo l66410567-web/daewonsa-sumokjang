@@ -3776,3 +3776,10 @@ body.home .closing p { max-width: 640px; margin-left: auto; margin-right: auto; 
   .mhero .visit-must--hero .vm-why { display: block !important; }
   .mhero .visit-must--hero b::after { content: "·"; }
 }
+
+/* 사진 설명 문구: 조금 더 진하고 또렷하게 */
+body.sub figcaption, body.sub .card-photo figcaption, body.sub .fig figcaption {
+  font-family: var(--sans) !important; font-size: 16px !important; font-weight: 600 !important; color: #2B2418 !important;
+  line-height: 1.5; letter-spacing: -.005em; padding: 10px 10px 12px; margin-top: 0;
+}
+body.sub .card-photo figcaption { text-align: center; }
