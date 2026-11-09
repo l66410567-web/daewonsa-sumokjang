@@ -3800,3 +3800,35 @@ body.sub .trail-stop p { font-size: 17.5px; line-height: 1.85; margin: 0 0 4px; 
 body.sub .trail-stop .photo, body.sub .trail-stop .fig, body.sub .trail-stop .fig img { margin-top: 14px; border-radius: 8px; }
 body.sub .trail-stop--end .btn-row { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; }
 @media (min-width: 768px) { body.sub .trail-stop, body.sub .trail-stop.on, body.sub .trail-stop--end { padding: 30px 34px 34px !important; } body.sub .trail-stop p { font-size: 18.5px; } }
+
+/* =========================================================================
+   꽃길숲의 터(명당) 압축 안내 — 메인 / 구간 순서 조정
+   ========================================================================= */
+body.home main > .myd-sec { order: 5 !important; }
+body.home main > .lf-sec { order: 6 !important; }
+body.home main > .gal-sec { order: 7 !important; }
+body.home main > .trust2 { order: 8 !important; }
+body.home main > .ph-sec { order: 9 !important; }
+body.home main > .vf-sec { order: 10 !important; }
+body.home main > .near-sec { order: 11 !important; }
+body.home main > .faq-sec { order: 12 !important; }
+body.home main > .closing { order: 13 !important; }
+
+body.home .myd-sec {
+  --sc: #94671E; background: var(--h-hanji2) !important;
+  border-top: 4px double var(--h-gold); border-bottom: 4px double var(--h-gold);
+}
+body.home .myd-sec .sec-title { margin-bottom: 8px; }
+body.home .myd-list { display: grid; gap: 14px; margin: 38px 0 0; padding: 0; list-style: none; grid-template-columns: 1fr; }
+@media (min-width: 768px) { body.home .myd-list { grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 52px; } }
+body.home .myd-list li {
+  background: var(--h-paper); border: 1px solid var(--h-bd-s); border-radius: 8px; padding: 28px 24px 26px; text-align: left;
+  box-shadow: inset 0 0 0 5px var(--h-paper), inset 0 0 0 6px rgba(176,138,62,.5);
+}
+body.home .myd-list b { display: block; margin-bottom: 8px; font-family: var(--sans); font-size: 21px; font-weight: 700; letter-spacing: -.015em; line-height: 1.4; color: var(--h-red); }
+body.home .myd-list span { display: block; font-size: 17px; line-height: 1.75; color: var(--h-body); }
+body.home .myd-note { margin: 22px 0 0; text-align: center; font-size: 15px; color: var(--h-sub); }
+
+/* 수목장 안내: 가치 3칸 */
+body.sub .value-strip { grid-template-columns: 1fr; }
+@media (min-width: 768px) { body.sub .value-strip { grid-template-columns: repeat(3, 1fr); } }
