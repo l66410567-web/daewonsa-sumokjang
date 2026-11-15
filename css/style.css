@@ -3832,3 +3832,45 @@ body.home .myd-note { margin: 22px 0 0; text-align: center; font-size: 15px; col
 /* 수목장 안내: 가치 3칸 */
 body.sub .value-strip { grid-template-columns: 1fr; }
 @media (min-width: 768px) { body.sub .value-strip { grid-template-columns: repeat(3, 1fr); } }
+
+/* =========================================================================
+   메인 설득 흐름 v2: 한눈에 보기 → 왜 그런가 4블록 → 사진 → 추모목 → 걱정 답 → 답사 → 질문 → 마무리
+   ========================================================================= */
+body.home main > .why-sec { order: 3 !important; }
+body.home main > .gal-sec { order: 4 !important; }
+body.home main > .ph-sec  { order: 5 !important; }
+body.home main > .lf-sec  { order: 6 !important; }
+body.home main > .vf-sec  { order: 7 !important; }
+body.home main > .faq-sec { order: 8 !important; }
+body.home main > .closing { order: 9 !important; }
+body.home .why-sec, body.home .ph-sec, body.home .vf-sec { background: var(--h-cream) !important; }
+body.home .gal-sec, body.home .lf-sec, body.home .faq-sec { background: var(--h-hanji) !important; }
+
+body.home .why-sec { --sc: #2C5B4B; }
+body.home .why-list { display: grid; gap: 46px; margin: 42px 0 0; }
+@media (min-width: 768px) { body.home .why-list { gap: 76px; margin-top: 64px; } }
+body.home .why-item { --c: #2C5B4B; display: grid; grid-template-columns: 1fr; gap: 20px; align-items: center; }
+body.home .why-item:nth-child(2) { --c: #8F3A2A; }
+body.home .why-item:nth-child(3) { --c: #94671E; }
+body.home .why-item:nth-child(4) { --c: #2F4A6B; }
+@media (min-width: 768px) {
+  body.home .why-item { grid-template-columns: 1.05fr 1fr; gap: 52px; }
+  body.home .why-item:nth-child(even) .why-fig { order: 2; }
+}
+body.home .why-fig { margin: 0; }
+body.home .why-fig img {
+  width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; box-sizing: border-box;
+  padding: 6px; background: var(--h-paper); border: 1px solid var(--h-bd-s); border-radius: 8px;
+}
+body.home .why-fig figcaption { margin-top: 8px; font-family: var(--sans); font-size: 15px; font-weight: 500; color: var(--h-sub); text-align: center; }
+body.home .why-tag {
+  display: inline-block; margin-bottom: 14px; padding: 6px 18px 7px; border-radius: 999px;
+  background: var(--c); color: #fff; font-size: 15.5px; font-weight: 700; letter-spacing: .02em; line-height: 1.3;
+}
+body.home .why-txt h3 { font-family: var(--sans); font-size: 26px; font-weight: 700; letter-spacing: -.025em; line-height: 1.4; margin: 0 0 14px; color: var(--h-ink); }
+@media (min-width: 768px) { body.home .why-txt h3 { font-size: 32px; } }
+body.home .why-txt p { font-size: 17.5px; line-height: 1.85; color: var(--h-body); margin: 0 0 16px; }
+@media (min-width: 768px) { body.home .why-txt p { font-size: 18.5px; } }
+body.home .why-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+body.home .why-chips li { padding: 5px 14px; border: 1px solid var(--h-bd-s); border-radius: 999px; background: var(--h-paper); font-size: 15px; font-weight: 600; color: var(--h-body); }
+body.home .lf-sec .sec-title { text-decoration: none !important; background-image: none !important; border-bottom: 0 !important; box-shadow: none !important; }
