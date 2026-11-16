@@ -3874,3 +3874,10 @@ body.home .why-txt p { font-size: 17.5px; line-height: 1.85; color: var(--h-body
 body.home .why-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
 body.home .why-chips li { padding: 5px 14px; border: 1px solid var(--h-bd-s); border-radius: 999px; background: var(--h-paper); font-size: 15px; font-weight: 600; color: var(--h-body); }
 body.home .lf-sec .sec-title { text-decoration: none !important; background-image: none !important; border-bottom: 0 !important; box-shadow: none !important; }
+
+/* 왜 그런가 블록: 안심 체크 목록 */
+body.home .why-txt p + p { margin-top: -4px; }
+body.home .why-checks { margin: 18px 0 0; padding: 18px 20px; list-style: none; display: grid; gap: 10px; background: var(--h-paper); border: 1px solid var(--h-bd); border-left: 5px solid var(--c); border-radius: 8px; }
+body.home .why-checks li { position: relative; padding-left: 28px; font-size: 16.5px; line-height: 1.65; font-weight: 500; color: var(--h-body); }
+body.home .why-checks li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; line-height: 20px; text-align: center; font-size: 14px; font-weight: 700; color: #fff; background: var(--c); border-radius: 50%; }
+@media (min-width: 768px) { body.home .why-checks li { font-size: 17px; } }
