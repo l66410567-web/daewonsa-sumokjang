@@ -3881,3 +3881,10 @@ body.home .why-checks { margin: 18px 0 0; padding: 18px 20px; list-style: none; 
 body.home .why-checks li { position: relative; padding-left: 28px; font-size: 16.5px; line-height: 1.65; font-weight: 500; color: var(--h-body); }
 body.home .why-checks li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 20px; height: 20px; line-height: 20px; text-align: center; font-size: 14px; font-weight: 700; color: #fff; background: var(--c); border-radius: 50%; }
 @media (min-width: 768px) { body.home .why-checks li { font-size: 17px; } }
+
+/* 왜 그런가 블록: 마음을 그려 보게 하는 문장 */
+body.home .why-txt .why-feel {
+  margin: 4px 0 18px; padding: 2px 0 2px 16px; border-left: 3px solid var(--c);
+  font-size: 18px; line-height: 1.85; font-weight: 600; color: var(--h-ink);
+}
+@media (min-width: 768px) { body.home .why-txt .why-feel { font-size: 19px; } }
