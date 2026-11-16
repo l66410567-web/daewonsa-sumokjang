@@ -3888,3 +3888,14 @@ body.home .why-txt .why-feel {
   font-size: 18px; line-height: 1.85; font-weight: 600; color: var(--h-ink);
 }
 @media (min-width: 768px) { body.home .why-txt .why-feel { font-size: 19px; } }
+
+/* 꽃길숲 사진: 모바일 2×2 세로 사진 4장 + 사진 더보기 / PC 4열 8장 */
+body.home .gallery-strip.gal-grid {
+  display: grid !important; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 30px 0 0; padding: 0; overflow: visible;
+}
+body.home .gallery-strip.gal-grid a { flex: none; width: auto; aspect-ratio: 3 / 4; scroll-snap-align: none; display: block; overflow: hidden; }
+body.home .gallery-strip.gal-grid img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (max-width: 767px) { body.home .gallery-strip.gal-grid a:nth-child(n+5) { display: none; } }
+@media (min-width: 768px) { body.home .gallery-strip.gal-grid { grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 44px; } }
+body.home .gal-more { margin: 26px 0 0; }
+body.home .gal-more .btn { min-width: 220px; }
