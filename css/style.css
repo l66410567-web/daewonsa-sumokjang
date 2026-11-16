@@ -3899,3 +3899,34 @@ body.home .gallery-strip.gal-grid img { width: 100%; height: 100%; object-fit: c
 @media (min-width: 768px) { body.home .gallery-strip.gal-grid { grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 44px; } }
 body.home .gal-more { margin: 26px 0 0; }
 body.home .gal-more .btn { min-width: 220px; }
+
+/* 이용료: 유형별 사진 카드(개인목·부부목·가족목) — 금액을 사진과 함께 쉽게 */
+body.sub .pc-legend { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 22px; margin: 26px 0 0; font-size: 16px; color: var(--h-body); }
+body.sub .pc-legend span { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; }
+body.sub .pc-legend span::before { content: ""; width: 13px; height: 13px; border-radius: 50%; background: currentColor; }
+body.sub .pc-legend .g { color: #94671E; }
+body.sub .pc-legend .f { color: var(--h-teal); }
+body.sub .pc-legend em { font-style: normal; color: var(--h-sub); font-size: 15.5px; }
+body.sub .pc-list { display: grid; grid-template-columns: 1fr; gap: 18px; margin: 20px 0 22px; padding: 0; list-style: none; }
+@media (min-width: 768px) { body.sub .pc-list { grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: start; } }
+body.sub .pc { background: var(--h-paper); border: 1px solid var(--h-bd-s); border-radius: 8px; padding: 12px 12px 18px; }
+body.sub .pc img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; }
+body.sub .pc-kind { display: block; margin: 16px 6px 4px; font-family: var(--sans); font-size: 22px; font-weight: 700; letter-spacing: -.02em; color: var(--h-ink); }
+body.sub .pc-kind em { margin-left: 8px; font-style: normal; font-size: 15.5px; font-weight: 700; color: var(--h-red); }
+body.sub .pc-desc { margin: 0 6px 12px; font-size: 16.5px; line-height: 1.6; color: var(--h-body); }
+body.sub .pc-rows { display: grid; gap: 8px; margin: 0 4px; }
+body.sub .pc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 10px; padding: 10px 12px; border-radius: 6px; background: var(--h-hanji); }
+body.sub .pc-row b { grid-column: 1 / -1; font-size: 15px; font-weight: 700; color: var(--h-red); }
+body.sub .pc-row span { display: block; font-size: 16px; font-weight: 700; line-height: 1.4; }
+body.sub .pc-row span small { display: block; margin-bottom: 1px; font-size: 13px; font-weight: 600; color: var(--h-sub); }
+body.sub .pc-row .g { color: #94671E; }
+body.sub .pc-row .f { color: var(--h-teal); }
+body.sub .pc-sub { margin: 0 0 14px; text-align: center; font-size: 15.5px; color: var(--h-sub); }
+@media (min-width: 768px) { body.sub .pc-list { align-items: stretch; } }
+body.sub .pc { display: flex; flex-direction: column; }
+body.sub .pc-rows { margin-top: auto; }
+body.sub .pc-row { grid-template-columns: 1fr; gap: 4px; }
+body.sub .pc-row b { grid-column: auto; margin-bottom: 2px; }
+body.sub .pc-row span { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; white-space: nowrap; }
+body.sub .pc-row span small { display: inline; margin: 0; font-size: 14px; }
+body.sub .pc-rows { margin-top: 4px; }
