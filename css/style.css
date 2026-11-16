@@ -3930,3 +3930,22 @@ body.sub .pc-row b { grid-column: auto; margin-bottom: 2px; }
 body.sub .pc-row span { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; white-space: nowrap; }
 body.sub .pc-row span small { display: inline; margin: 0; font-size: 14px; }
 body.sub .pc-rows { margin-top: 4px; }
+
+/* 개인목·부부목 카드: 어린 황금회화나무(실사진) 작은 사진 덧붙이기 */
+.ph-media, .pc-media { position: relative; }
+.ph-media > img.ph-photo { display: block; }
+.sap {
+  position: absolute; right: 10px; bottom: 10px; width: 31%; margin: 0;
+  border: 3px solid #fff; border-radius: 8px; overflow: hidden; background: #fff;
+  box-shadow: 0 2px 10px rgba(30,25,10,.38);
+}
+.sap img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border: 0 !important; padding: 0 !important; background: none !important; box-shadow: none !important; border-radius: 0 !important; }
+.sap figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 14px 4px 5px; text-align: center;
+  font-family: var(--sans); font-size: 11.5px; font-weight: 700; line-height: 1.3; letter-spacing: -.01em; color: #fff;
+  background: linear-gradient(0deg, rgba(20,28,6,.82), rgba(20,28,6,0));
+}
+@media (min-width: 768px) { .sap figcaption { font-size: 12.5px; } }
+body.sub .pc-media img:not(.sap img) { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; }
+body.sub .pc .sap img, body.home .ph .sap img { aspect-ratio: 3 / 4 !important; border-radius: 0 !important; width: 100% !important; height: auto !important; }
+body.sub .pc-media > img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; }
