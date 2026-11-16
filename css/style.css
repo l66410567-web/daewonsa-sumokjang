@@ -3949,3 +3949,8 @@ body.sub .pc-rows { margin-top: 4px; }
 body.sub .pc-media img:not(.sap img) { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; }
 body.sub .pc .sap img, body.home .ph .sap img { aspect-ratio: 3 / 4 !important; border-radius: 0 !important; width: 100% !important; height: auto !important; }
 body.sub .pc-media > img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; }
+
+/* 황금회화나무 꽃말(작게) */
+body.sub .flower-lang { margin: 8px 0 0; font-size: 14.5px; font-weight: 600; letter-spacing: .01em; color: #94671E; }
+body.sub .flower-lang::before { content: "✿ "; font-size: 13px; }
+body.sub .faq-a .flower-lang { margin-top: 10px; }
