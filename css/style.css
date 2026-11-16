@@ -3954,3 +3954,26 @@ body.sub .pc-media > img { display: block; width: 100%; height: auto; aspect-rat
 body.sub .flower-lang { margin: 8px 0 0; font-size: 14.5px; font-weight: 600; letter-spacing: .01em; color: #94671E; }
 body.sub .flower-lang::before { content: "✿ "; font-size: 13px; }
 body.sub .faq-a .flower-lang { margin-top: 10px; }
+
+/* =========================================================================
+   이용료: 유형별(개인목·부부목·가족목) 한 줄 카드 — 사진 | 이름·설명 | 나무별 금액
+   ========================================================================= */
+body.sub .pr-list { margin: 26px 0 18px; border: 1px solid var(--h-bd-s); border-radius: 10px; overflow: hidden; background: var(--h-paper); }
+body.sub .pr { display: grid; grid-template-columns: 1fr; gap: 18px; align-items: center; padding: 22px 18px; }
+body.sub .pr + .pr { border-top: 1px solid var(--h-bd); }
+@media (min-width: 768px) { body.sub .pr { grid-template-columns: 230px 1fr 340px; gap: 30px; padding: 26px 30px; } }
+body.sub .pr-photo { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; }
+body.sub .pr-no { display: inline-block; margin-bottom: 10px; padding: 4px 14px 5px; border-radius: 999px; background: var(--h-red); color: #fff; font-size: 14.5px; font-weight: 700; line-height: 1.3; }
+body.sub .pr-info h4 { margin: 0 0 6px; font-family: var(--sans); font-size: 28px; font-weight: 700; letter-spacing: -.02em; color: var(--h-ink); }
+body.sub .pr-info p { margin: 0; font-size: 17px; line-height: 1.7; color: var(--h-body); }
+body.sub .pr-box { padding: 6px 16px; border-radius: 8px; background: var(--h-hanji); }
+body.sub .pr-prices { margin: 0; padding: 0; list-style: none; }
+body.sub .pr-prices li { display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; align-items: center; padding: 11px 0; }
+body.sub .pr-prices li + li { border-top: 1px solid var(--h-hair); }
+body.sub .pr-prices img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; box-shadow: 0 0 0 1px var(--h-bd); }
+body.sub .pr-name b { display: block; font-size: 16.5px; font-weight: 700; line-height: 1.3; color: var(--h-ink); }
+body.sub .pr-sub { display: block; font-size: 13.5px; line-height: 1.3; color: var(--h-sub); }
+body.sub .pr-prices strong { font-size: 19px; font-weight: 700; white-space: nowrap; }
+body.sub .pr-prices .g strong { color: #94671E; }
+body.sub .pr-prices .f strong { color: var(--h-teal); }
+body.sub .pr-note { margin: 0 0 8px; padding-top: 6px; border-top: 1px dashed var(--h-bd); font-size: 14px; line-height: 1.55; color: var(--h-sub); }
