@@ -3977,3 +3977,4 @@ body.sub .pr-prices strong { font-size: 19px; font-weight: 700; white-space: now
 body.sub .pr-prices .g strong { color: #94671E; }
 body.sub .pr-prices .f strong { color: var(--h-teal); }
 body.sub .pr-note { margin: 0 0 8px; padding-top: 6px; border-top: 1px dashed var(--h-bd); font-size: 14px; line-height: 1.55; color: var(--h-sub); }
+body.home .why-list { margin-top: 0; }
