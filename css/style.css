@@ -3978,3 +3978,9 @@ body.sub .pr-prices .g strong { color: #94671E; }
 body.sub .pr-prices .f strong { color: var(--h-teal); }
 body.sub .pr-note { margin: 0 0 8px; padding-top: 6px; border-top: 1px dashed var(--h-bd); font-size: 14px; line-height: 1.55; color: var(--h-sub); }
 body.home .why-list { margin-top: 0; }
+
+/* 소개 블록 제목 밑줄 */
+body.home .why-txt h3 {
+  text-decoration: underline; text-decoration-color: var(--c); text-decoration-thickness: 3px;
+  text-underline-offset: 8px; text-decoration-skip-ink: none;
+}
